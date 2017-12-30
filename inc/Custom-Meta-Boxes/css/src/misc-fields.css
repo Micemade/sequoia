@@ -1,0 +1,65 @@
+/** 
+ * Title Field
+ */
+.AS_Title .field-title { 
+	margin: 8px 0 !important; 
+}
+
+.AS_Title h2 { 
+	margin: 0 !important; 
+	padding: 0 !important; 
+}
+
+
+/** 
+ * Color Picker
+ */
+.AS_Color_Picker .field-item { 
+	float: left; 
+	clear: both; 
+}
+
+.AS_Color_Picker:before,
+.AS_Color_Picker:after {
+    content: "";
+    display: table;
+} 
+
+.AS_Color_Picker:after {
+    clear: both;
+}
+
+.AS_Color_Picker {
+    zoom: 1;
+}
+
+
+/**
+ * Timepicker
+ */
+div.time-picker { position: absolute; height: 191px; width:4em; /* needed for IE */ overflow: auto; background: #fff; border: 1px solid #aaa; z-index: 99; margin: 0; }
+div.time-picker-12hours { width:6em; /* needed for IE */ }
+div.time-picker ul { list-style-type: none; margin: 0; padding: 0; }
+div.time-picker li { cursor: pointer; height: 10px; font: 12px/1 Helvetica, Arial, sans-serif; padding: 4px 3px; }
+div.time-picker li.selected { background: #0063CE; color: #fff; }
+
+.as_metabox input.as_timepicker { 
+	width: 100px; 
+	margin-right: 0;
+}
+
+.AS_Datetime_Timestamp_Field input + input { 
+	margin-left: 4px; 
+}
+
+/**
+ * Select Fields
+ */
+
+.as_select { 
+	width: 100%; 
+}
+
+.select2-offscreen { 
+	display: none; 
+} 

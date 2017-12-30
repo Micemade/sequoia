@@ -1,0 +1,56 @@
+/** AS Layout **/
+
+.as_metabox .field { 
+	padding: 16px 0;
+	border-bottom: 1px solid #DFDFDF;
+}
+
+.as-row:last-child > [class*="as-cell-"]  > .field { 
+	border-bottom: 0; 
+}
+
+/* Neaten up the margins when metaboxes are within the standard postbox. */
+.postbox > .inside > .as_metabox {
+	margin: -10px 0; 
+}
+
+.as_metabox .as-row { 
+	overflow: hidden; 
+	margin: 0 -5px; 
+	zoom: 1;
+}
+
+.as_metabox .as-row:before,
+.as_metabox .as-row:after {
+    content: "";
+    display: table;
+} 
+.as_metabox .as-row:after {
+    clear: both;
+}
+
+.as_metabox [class*="as-cell-"] { 
+	float: left; 
+	padding: 0 5px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.as_metabox .as-cell-1  { width: 8.333333333%; }
+.as_metabox .as-cell-2  { width: 16.666666667%; }
+.as_metabox .as-cell-3  { width: 25%; }
+.as_metabox .as-cell-4  { width: 33.333333333%; }
+.as_metabox .as-cell-5  { width: 41.666666667%; }
+.as_metabox .as-cell-6  { width: 50%; }
+.as_metabox .as-cell-7  { width: 58.333333333%; }
+.as_metabox .as-cell-8  { width: 66.666666667%; }
+.as_metabox .as-cell-9  { width: 75%; }
+.as_metabox .as-cell-10 { width: 83.333333333%; }
+.as_metabox .as-cell-11 { width: 91.666666667%; }
+.as_metabox .as-cell-12 { width: 100%; }
+
+@media all and ( max-width: 850px ) {
+
+	.as_metabox [class*="as-cell-"] { width: 100%; }
+
+}

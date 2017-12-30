@@ -1,0 +1,157 @@
+<wpml-config>
+    <custom-fields>
+		<custom-field action="copy">aq_block_1</custom-field>
+		<custom-field action="copy">aq_block_2</custom-field>
+		<custom-field action="copy">aq_block_3</custom-field>
+		<custom-field action="copy">aq_block_4</custom-field>
+		<custom-field action="copy">aq_block_5</custom-field>
+		<custom-field action="copy">aq_block_6</custom-field>
+		<custom-field action="copy">aq_block_7</custom-field>
+		<custom-field action="copy">aq_block_8</custom-field>
+		<custom-field action="copy">aq_block_9</custom-field>
+		<custom-field action="copy">aq_block_10</custom-field>
+		<custom-field action="copy">aq_block_11</custom-field>
+		<custom-field action="copy">aq_block_12</custom-field>
+		<custom-field action="copy">aq_block_13</custom-field>
+		<custom-field action="copy">aq_block_14</custom-field>
+		<custom-field action="copy">aq_block_15</custom-field>
+		<custom-field action="copy">aq_block_16</custom-field>
+		<custom-field action="ignore">as_featured_item</custom-field>
+		<custom-field action="ignore">attribute_pa_colors</custom-field>
+		<custom-field action="ignore">attribute_pa_size</custom-field>
+		<custom-field action="translate">custom-description</custom-field>
+		<custom-field action="translate">custom-title</custom-field>
+		<custom-field action="translate">description</custom-field>
+		<custom-field action="translate">keywords</custom-field>
+		<custom-field action="ignore">quantity</custom-field>
+		<custom-field action="translate">title</custom-field>
+		<custom-field action="ignore">total_sales</custom-field>
+		<custom-field action="copy">weight</custom-field>
+		<custom-field action="translate">_audio_meta_box</custom-field>
+		<custom-field action="copy">_backorders</custom-field>
+		<custom-field action="copy">_cms_nav_minihome</custom-field>
+		<custom-field action="copy">_cms_nav_section</custom-field>
+		<custom-field action="copy">_default_attributes</custom-field>
+		<custom-field action="copy">_downloadable</custom-field>
+		<custom-field action="copy">_download_expiry</custom-field>
+		<custom-field action="copy">_download_limit</custom-field>
+		<custom-field action="ignore">_featured</custom-field>
+		<custom-field action="ignore">_featured_item_meta_box</custom-field>
+		<custom-field action="copy">_file_paths</custom-field>
+		<custom-field action="translate">_gallery_meta_box</custom-field>
+		<custom-field action="ignore">_general_meta_box</custom-field>
+		<custom-field action="ignore">_height</custom-field>
+		<custom-field action="ignore">_length</custom-field>
+		<custom-field action="copy">_manage_stock</custom-field>
+		<custom-field action="copy">_max_variation_price</custom-field>
+		<custom-field action="copy">_max_variation_regular_price</custom-field>
+		<custom-field action="copy">_max_variation_sale_price</custom-field>
+		<custom-field action="copy">_menu_item_classes</custom-field>
+		<custom-field action="copy">_menu_item_clear</custom-field>
+		<custom-field action="copy">_menu_item_color</custom-field>
+		<custom-field action="copy">_menu_item_column</custom-field>
+		<custom-field action="copy">_menu_item_image</custom-field>
+		<custom-field action="copy">_menu_item_megamenu</custom-field>
+		<custom-field action="copy">_menu_item_menu_item_parent</custom-field>
+		<custom-field action="copy">_menu_item_object</custom-field>
+		<custom-field action="copy">_menu_item_object_id</custom-field>
+		<custom-field action="copy">_menu_item_orphaned</custom-field>
+		<custom-field action="copy">_menu_item_row</custom-field>
+		<custom-field action="copy">_menu_item_target</custom-field>
+		<custom-field action="copy">_menu_item_type</custom-field>
+		<custom-field action="copy">_menu_item_url</custom-field>
+		<custom-field action="copy">_menu_item_xfn</custom-field>
+		<custom-field action="copy">_min_variation_price</custom-field>
+		<custom-field action="copy">_min_variation_regular_price</custom-field>
+		<custom-field action="copy">_min_variation_sale_price</custom-field>
+		<custom-field action="copy">_my_meta_value_key</custom-field>
+		<custom-field action="translate">_portfolio_meta_box</custom-field>
+		<custom-field action="ignore">_price</custom-field>
+		<custom-field action="copy">_product_attributes</custom-field>
+		<custom-field action="copy">_product_image_gallery</custom-field>
+		<custom-field action="copy">_purchase_note</custom-field>
+		<custom-field action="translate">_quote_meta_box</custom-field>
+		<custom-field action="ignore">_regular_price</custom-field>
+		<custom-field action="ignore">_sale_price</custom-field>
+		<custom-field action="copy">_sale_price_dates_from</custom-field>
+		<custom-field action="copy">_sale_price_dates_to</custom-field>
+		<custom-field action="ignore">_sku</custom-field>
+		<custom-field action="copy">_slide_box</custom-field>
+		<custom-field action="ignore">_sold_individually</custom-field>
+		<custom-field action="translate">_stock</custom-field>
+		<custom-field action="translate">_stock_status</custom-field>
+		<custom-field action="copy">_tax_class</custom-field>
+		<custom-field action="copy">_tax_status</custom-field>
+		<custom-field action="copy">_top_nav_excluded</custom-field>
+		<custom-field action="translate">_video_meta_box</custom-field>
+		<custom-field action="copy">_virtual</custom-field>
+		<custom-field action="copy">_visibility</custom-field>
+		<custom-field action="copy">_weight</custom-field>
+		<custom-field action="copy">_width</custom-field>
+		<custom-field action="translate">_wp_attachment_image_alt</custom-field>
+		<custom-field action="ignore">_wp_old_slug</custom-field>
+		<custom-field action="ignore">_wp_trash_meta_status</custom-field>
+		<custom-field action="ignore">_wp_trash_meta_time</custom-field>
+    </custom-fields>
+    <custom-types>
+        <custom-type translate="1">product</custom-type>
+        <custom-type translate="1">product_variation</custom-type>
+        <custom-type translate="1">shop_coupon</custom-type>
+        <custom-type translate="1">portfolio</custom-type>
+        <custom-type translate="1">slide</custom-type>
+        <custom-type translate="1">template</custom-type>
+    </custom-types>    
+    <taxonomies>
+        <taxonomy translate="1">product_type</taxonomy>
+        <taxonomy translate="1">product_cat</taxonomy>
+        <taxonomy translate="1">product_tag</taxonomy>
+        <taxonomy translate="1">product_shipping_class</taxonomy>
+        <taxonomy translate="0">shop_order_status</taxonomy>
+        <taxonomy translate="1">portfolio_tag</taxonomy>
+        <taxonomy translate="1">portfolio_category</taxonomy>
+        <taxonomy translate="1">slider</taxonomy>
+    </taxonomies>
+	
+	<admin-texts>
+		<key name="of_options">
+			<key name="footer_text" />
+		</key>
+	</admin-texts>
+	
+	
+    <language-switcher-settings>
+        <key name="icl_lang_sel_config">
+            <key name="font-current-normal">#444444</key>
+            <key name="font-current-hover">#000000</key>
+            <key name="background-current-normal">#ffffff</key>
+            <key name="background-current-hover">#eeeeee</key>
+            <key name="font-other-normal">#444444</key>
+            <key name="font-other-hover">#000000</key>
+            <key name="background-other-normal">#ffffff</key>
+            <key name="background-other-hover">#eeeeee</key>
+            <key name="border">#cdcdcd</key>
+        </key>
+        <key name="icl_lang_sel_footer_config">
+            <key name="font-current-normal">#444444</key>
+            <key name="font-current-hover">#000000</key>
+            <key name="background-current-normal">#ffffff</key>
+            <key name="background-current-hover">#eeeeee</key>
+            <key name="font-other-normal">#444444</key>
+            <key name="font-other-hover">#000000</key>
+            <key name="background-other-normal">#ffffff</key>
+            <key name="background-other-hover">#eeeeee</key>
+            <key name="border">#cdcdcd</key>
+        </key>    
+        <key name="icl_language_switcher_sidebar">0</key>  
+        <key name="icl_widget_title_show">0</key>
+        <key name="icl_lang_sel_type">dropdown</key>
+        <key name="icl_lso_link_empty">0</key>
+        <key name="icl_lso_flags">0</key>
+        <key name="icl_lso_native_lang">1</key>
+        <key name="icl_lso_display_lang">1</key>
+        <key name="icl_lang_sel_footer">0</key>
+        <key name="icl_post_availability">0</key>
+        <key name="icl_post_availability_position">below</key>
+        <key name="icl_post_availability_text">This post is also available in: %s</key>    
+    </language-switcher-settings>    
+</wpml-config>

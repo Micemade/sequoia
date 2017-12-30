@@ -1,0 +1,45 @@
+.as_metabox .field-item {
+	position: relative;
+}
+
+.as_metabox_description { 
+	color: #AAA; 
+	font-style: italic; 
+	margin: 0 0 16px !important;
+}
+
+.as_metabox input[type=text], 
+.as_metabox textarea, 
+.as_metabox select { 
+	width: 100%;
+}
+
+.as_metabox input.as_text_small { 
+	width: 100px; 
+}
+
+.as_metabox input.as_text_medium {
+	width: 230px; 
+	margin-right: 15px;
+}
+
+.as_metabox input[type="radio"] { 
+	margin: 0 5px 0 0; 
+	padding: 0;
+}
+
+.as_metabox input[type="checkbox"] { 
+	margin: 0 5px 0 0; 
+	padding: 0;
+}
+
+.as_metabox .field-title { 
+	margin-top: -4px; 
+	margin-bottom: 16px; 
+	margin-top: 0; 
+	font-weight: bold; 
+}
+
+.as_metabox .field-title label {
+	vertical-align: baseline;
+}
