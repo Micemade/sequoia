@@ -535,30 +535,3 @@ function as_meta_boxes( array $meta_boxes ) {
 
 }
 add_filter( 'as_meta_boxes', 'as_meta_boxes' );
-//
-//
-//
-/**
- *	HIDE DEFAULT META BOXES
- *
- */
-// initial default hiding of meta boxes - can be overridden by "Screen options" :
-add_filter('default_hidden_meta_boxes', 'hide_meta_lock', 10, 2);
-function hide_meta_lock( $hidden, $screen ) {
-	
-	$hidden = array();
-	if ( 'post' == $screen->base ) {
-		$hidden = array('postexcerpt','slugdiv','postcustom','trackbacksdiv', 'commentstatusdiv', 'commentsdiv', 'authordiv', 'revisionsdiv');
-	}
-	return $hidden;
-}
-// force hiding meta boxes - indepenent on "Screen options" :
-$hidden_metaboxes = apply_filters( 'sequoia_options', 'hidden_metaboxes', true);
-if( $hidden_metaboxes ) {
-	add_filter( 'hidden_meta_boxes', 'custom_hidden_meta_boxes' );
-	function custom_hidden_meta_boxes( $hidden ) {
-		$hidden[] = 'postexcerpt';
-		return $hidden;
-	}
-}
-?>

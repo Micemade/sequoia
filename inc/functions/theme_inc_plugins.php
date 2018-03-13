@@ -51,8 +51,8 @@ function sequoia_micemade_register_required_plugins() {
 		array(
 			'name' 				=> 'Sequoia Additional Functions',
 			'slug' 				=> 'sequoia-additional-functions',
-			'source'			=> 'http://aligator-studio.com/tgm_pa_plugins/sequoia-additional-functions.zip',
-			'external_url'		=> 'http://aligator-studio.com/tgm_pa_plugins/sequoia-additional-functions.zip',
+			'source'			=> 'https://demo.micemade.com/tgmpa/sequoia-additional-functions.zip',
+			'external_url'		=> 'https://demo.micemade.com/tgmpa/sequoia-additional-functions.zip',
 			'required' 			=> true,
 		),
 		array(
@@ -71,8 +71,8 @@ function sequoia_micemade_register_required_plugins() {
 		array(
 			'name' 				=> 'Revolution Slider',
 			'slug' 				=> 'revslider',
-			'source'			=> 'http://aligator-studio.com/tgm_pa_plugins/revslider.zip',
-			'external_url'		=> 'http://aligator-studio.com/tgm_pa_plugins/revslider.zip',
+			'source'			=> 'https://demo.micemade.com/tgmpa/revslider.zip',
+			'external_url'		=> 'https://demo.micemade.com/tgmpa/revslider.zip',
 			'required' 			=> true,
 		),
 		array(
@@ -88,8 +88,8 @@ function sequoia_micemade_register_required_plugins() {
 		array(
 			'name' 				=> 'AS Shortcodes',
 			'slug' 				=> 'as-shortcodes',
-			'source'			=> 'http://aligator-studio.com/tgm_pa_plugins/as-shortcodes.zip',
-			'external_url'		=> 'http://aligator-studio.com/tgm_pa_plugins/as-shortcodes.zip',
+			'source'			=> 'https://demo.micemade.com/tgmpa/as-shortcodes.zip',
+			'external_url'		=> 'https://demo.micemade.com/tgmpa/as-shortcodes.zip',
 			'required' 			=> false,
 
 		),

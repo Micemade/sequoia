@@ -15,7 +15,7 @@ class AS_Single_Product_Block extends AQ_Block {
 	
 	function form($instance) {
 		
-		$sequoia_wc_active = apply_filters( "sequoia_wc_active","");
+		$sequoia_wc_active = apply_filters( 'sequoia_wc_active',"");
 		
 		if ( $sequoia_wc_active ) { 
 		
@@ -238,7 +238,7 @@ class AS_Single_Product_Block extends AQ_Block {
 		
 		global $post, $sequoia_wishlist_is_active, $product, $wp_query, $woocommerce;
 		
-		$sequoia_wc_active = apply_filters( "sequoia_wc_active","");
+		$sequoia_wc_active = apply_filters( 'sequoia_wc_active',"");
 		
 		extract($instance);
 		

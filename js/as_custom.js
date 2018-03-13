@@ -1522,12 +1522,12 @@ $('.wrap').watch("height",
 			
 			var ss_navig	= config.attr('data-navigation');
 			var ss_pagin	= config.attr('data-pagination');
-			var ss_auto		= config.attr('data-auto');			
-			var ss_desk		= config.attr('data-desktop');			
-			var ss_desksmall= config.attr('data-desktop-small');			
-			var ss_tablet	= config.attr('data-tablet');			
-			var ss_mobile	= config.attr('data-mobile');			
-			var ss_transition	= config.attr('data-trans');			
+			var ss_auto		= config.attr('data-auto');
+			var ss_desk		= config.attr('data-desktop');
+			var ss_desksmall= config.attr('data-desktop-small');
+			var ss_tablet	= config.attr('data-tablet');
+			var ss_mobile	= config.attr('data-mobile');
+			var ss_transition	= config.attr('data-trans');
 			
 			$this.owlCarousel({
 						
@@ -1552,6 +1552,12 @@ $('.wrap').watch("height",
 						beforeInit			: function () {
 							// fixes row block fixed background image in Chrome/Safari:
 							$('.aq-block-as_row_block').css('-webkit-transform:', 'translate3d(0,0,0)');
+						},
+						afterInit		: function () {
+							setTimeout( function() {
+								$(window).trigger('resize');
+							}
+							, 100 );
 						},
 						transitionStyle		: ss_transition ? ss_transition : false
 						

@@ -5,7 +5,7 @@ Github Theme URI:	https://github.com/micemade/sequoia
 Author:			Aligator Studio
 Author URI:		http://themeforest.net/user/aligatorstudio
 Description: 	A semantic, HTML5, CSS3 theme for Wordpress. Main features: responsive, high-resolution (retina) ready, woocommerce compatible, aqua page builder compatible. Original Aligator Studio quality.
-Version:		1.5.0
+Version:		1.6.0
 License:		Located in 'licensing' folder
 License URI:	Located in 'licensing' folder
 Tags:			one-column,two-columns,left-sidebar,right-sidebar,custom-menu,featured-images,full-width-template, microformats, post-formats, sticky-post, theme-options, translation-ready
@@ -44,7 +44,7 @@ div#bodywrap {
 
 .content-block,
 .cat-images,
-.product-categories,
+.products,
 .woocommerce ul.products ,
 .woocommerce-page ul.products,
 .portfolio-single,
@@ -165,8 +165,8 @@ button,
 .banner-block .item-overlay,
 .banner-block .text-holder > *,
 .category-image *,
-.product-categories .item-overlay,
-.product-categories .box-title,
+.products .item-overlay,
+.products .box-title,
 .icon-block,
 .icon-block .icon-back-color,
 .team-member-block,
@@ -4162,7 +4162,7 @@ font-size: 0.8rem;
 }
 
 .category-image .term,
-.product-categories .term {
+.products .term {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -4179,13 +4179,13 @@ font-size: 0.8rem;
 }
 
 .category-image .term div,
-.product-categories .term div, 
-.product-categories .term .table {
+.products .term div, 
+.products .term .table {
 	width: 100%;
 	height: 100%;
 }
 .category-image .term h4,
-.product-categories .term h4 {
+.products .term h4 {
 	position: relative;
 	display: inline-block;
 	padding: 0.6rem 1.2rem;
@@ -4210,7 +4210,7 @@ font-size: 0.8rem;
 }
 .category-image > a,
 .category-image > div,
-.product-categories .item > a {
+.products .item > a {
 	position: relative;
 	float: left;
 	z-index: 0;
@@ -7757,23 +7757,23 @@ p.nocomments {
 	border-width: 1px;
 }
 
-.woocommerce .product-categories,
-.woocommerce-page .product-categories {
+.woocommerce .products,
+.woocommerce-page .products {
 	clear: both;
 	padding: 0;
 }
-.woocommerce .product-categories .product,
-.woocommerce-page .product-categories .product{
+.woocommerce .products .product,
+.woocommerce-page .products .product{
 	margin:0 0 1.875rem;
 }
 
 
-.widget.woocommerce .product-categories {
+.widget.woocommerce .products {
 	margin: 0;
 }
 
-.woocommerce .product-categories div.product-category,
-.woocommerce-page .product-categories div.product-category {
+.woocommerce .products div.product-category,
+.woocommerce-page .products div.product-category {
 	overflow: hidden;
 }
 .woocommerce .product-category a,

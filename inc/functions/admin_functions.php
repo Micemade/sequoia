@@ -250,15 +250,20 @@ function sequoia_remove_deprecated_templates() {
 		'woocommerce/myaccount/my-downloads.php',
 		'woocommerce/cart/cart.php',
 		'woocommerce/global/breadcrumb-before2.3.php',
-		// since 1.3.2
+		// since 1.3.2.
 		'woocommerce/checkout/thankyou.php',
 		'woocommerce/order/tracking.php',
-		// since 1.3.3
+		// since 1.3.3.
 		'woocommerce/cart/mini-cart.php',
-		// since 1.4.1
+		// since 1.4.1.
 		'woocommerce/order/form-tracking.php',
 		'woocommerce/myaccount/form-login.php',
 		'woocommerce/cart/shipping-calculator.php',
+		// since 1.6.0
+		'woocommerce/checkout/form-coupon.php',
+		'woocommerce/checkout/form-pay.php',
+		'woocommerce/checkout/review-order.php',
+		'woocommerce/myaccount/form-edit-account.php',
 	);
 	
 	if( empty( $files_to_remove ) ) return;

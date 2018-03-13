@@ -27,7 +27,7 @@ class AS_Ajax_Categories extends AQ_Block {
 	
 	function form($instance) {
 		
-		$sequoia_wc_active = apply_filters( "sequoia_wc_active","");
+		$sequoia_wc_active = apply_filters( 'sequoia_wc_active',"");
 		
 		$defaults = array(
 			'title'				=> '',

@@ -1,27 +1,18 @@
-# Copyright Micemade (c) {2017}
+# Copyright (C) 2018 sequoia
+# This file is distributed under the same license as the sequoia package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Sequoia 1.4.1\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2017-10-13 08:06:48+00:00\n"
+"Project-Id-Version: sequoia\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"X-Generator: grunt-wp-i18n 0.5.4\n"
-"X-Poedit-KeywordsList: "
-"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
-"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
-"Language: en\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-Country: United States\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-Basepath: ../\n"
+"Language-Team: Micemade <alen@micemade.com>\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
-"X-Poedit-Bookmarks: \n"
-"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: 404.php:29
 msgid "Page missing - 404"
@@ -40,41 +31,7 @@ msgid "Reason why you're seeing this page could be one of the following:"
 msgstr ""
 
 #: 404.php:56
-msgid ""
-"<ul><li>You clicked the broken link</li><li>You typed incorrect link "
-"directly in the address bar</li><li>There is a glitch in the server, "
-"database or system, or</li><li>Maybe, but just maybe, it might be our "
-"mistake</li></ul> "
-msgstr ""
-
-#: admin/admin-interface.php:104 admin/admin-interface.php:122
-msgid "Save All Changes"
-msgstr ""
-
-#: admin/admin-interface.php:123
-msgid "Options Reset"
-msgstr ""
-
-#: admin/admin-interface.php:745
-msgid "Click OK to backup your current saved options."
-msgstr ""
-
-#: admin/admin-interface.php:792
-msgid ""
-"Warning: All of your current options will be replaced with the data from "
-"your last backup! Proceed?"
-msgstr ""
-
-#: admin/admin-interface.php:931
-msgid "Click OK to reset. All settings will be lost!"
-msgstr ""
-
-#: admin/admin-interface.php:2356
-msgid "Last Backup : "
-msgstr ""
-
-#: admin/admin-interface.php:2508
-msgid "Upload"
+msgid "<ul><li>You clicked the broken link</li><li>You typed incorrect link directly in the address bar</li><li>There is a glitch in the server, database or system, or</li><li>Maybe, but just maybe, it might be our mistake</li></ul> "
 msgstr ""
 
 #: archive.php:36
@@ -85,8 +42,18 @@ msgstr ""
 msgid "Monthly Archives: %s"
 msgstr ""
 
+#: archive.php:38
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
 #: archive.php:40
 msgid "Yearly Archives: %s"
+msgstr ""
+
+#: archive.php:40
+msgctxt "yearly archives date format"
+msgid "Y"
 msgstr ""
 
 #: archive.php:42
@@ -119,10 +86,7 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: content-audio.php:75 content-gallery.php:82 content-image.php:64
-#: content-page.php:20 content-single.php:185 content-video.php:60
-#: content.php:57 page-blank.php:27 page-blank_footerwidgets.php:27
-#: page-page_builder.php:81
+#: content-audio.php:75, content-gallery.php:82, content-image.php:64, content-page.php:20, content-single.php:185, content-video.php:60, content.php:57, page-blank.php:27, page-blank_footerwidgets.php:27, page-page_builder.php:81
 msgid "Pages:"
 msgstr ""
 
@@ -134,49 +98,351 @@ msgstr ""
 msgid "Top"
 msgstr ""
 
-#: functions.php:304
-msgid ""
-"SEQUOIA THEME IMPORTANT NOTICE!<br>Since version 1.3.1 Sequoia WP theme "
-"uses \"Sequoia Additional Functions\" plugin, to which are transferred some "
-"\"plugin territory\" functionalities, existent in theme until v.1.3.1. "
-"Please install and activate the \"Sequoia Additional Functions\" in "
-"Appearance > Install plugins<br>Please, click (x) to close this message"
+#: functions.php:288
+msgid "SEQUOIA THEME IMPORTANT NOTICE!<br>Since version 1.3.1 Sequoia WP theme uses \"Sequoia Additional Functions\" plugin, to which are transferred some \"plugin territory\" functionalities, existent in theme until v.1.3.1. Please install and activate the \"Sequoia Additional Functions\" in Appearance > Install plugins<br>Please, click (x) to close this message"
 msgstr ""
 
-#: functions.php:311
-msgid ""
-"Required plugin \"Sequoia additional functions\" is not active. Please go "
-"to Appearance > Install plugins and (install and)  activate the plugin."
+#: functions.php:295
+msgid "Required plugin \"Sequoia additional functions\" is not active. Please go to Appearance > Install plugins and (install and)  activate the plugin."
 msgstr ""
 
 #: header-mobile.php:22
 msgid "Toggle menu"
 msgstr ""
 
-#: inc/Custom-Meta-Boxes/classes.fields.php:361
-msgid "Add New"
+#: index.php:72, page-of-posts.php:120
+msgid "No posts to display"
 msgstr ""
 
-#: inc/Custom-Meta-Boxes/classes.fields.php:430
-msgid "Add File"
+#: index.php:76, page-of-posts.php:124
+msgid "Ready to publish your first post? <a href=\"%s\">Get started here</a>."
 msgstr ""
 
-#: inc/Custom-Meta-Boxes/classes.fields.php:448
-#: inc/Custom-Meta-Boxes/classes.fields.php:508
-#: woocommerce/wishlist-view.php:255
+#: index.php:84, page-of-posts.php:130
+msgid "No posts found on this site"
+msgstr ""
+
+#: index.php:89, page-of-posts.php:134
+msgid "We are sorry, but no results were found. Try search ti find a related post."
+msgstr ""
+
+#: page-blank.php:2
+msgid "Blank template"
+msgstr ""
+
+#: page-blank_footerwidgets.php:2
+msgid "Blank with footer widgets"
+msgstr ""
+
+#: page-full_width.php:2
+msgid "Full width page"
+msgstr ""
+
+#: page-of-posts-inf.php:2
+msgid "Page of posts - INFINITE load"
+msgstr ""
+
+#: page-of-posts.php:2
+msgid "Page of posts"
+msgstr ""
+
+#: page-page_builder.php:2
+msgid "Page builder template"
+msgstr ""
+
+#: portfolio-related.php:52
+msgid "Related portfolio projects"
+msgstr ""
+
+#: search.php:42
+msgid "Search result:"
+msgstr ""
+
+#: search.php:62
+msgid "Your search \""
+msgstr ""
+
+#: search.php:62
+msgid "\" did not return any result."
+msgstr ""
+
+#: search.php:65
+msgid "<ul><li>Please, try to:</li><li>click browser \"Back\" button,</li><li>use search to find what are you looking for,</li><li>use menu to browse our site,</li><li>or use sitemap bellow this message.</li></ul> "
+msgstr ""
+
+#: searchform-menu.php:5
+msgid "Search here ..."
+msgstr ""
+
+#: searchform.php:5
+msgid "Type here ..."
+msgstr ""
+
+#: searchform.php:7
+msgid "Search"
+msgstr ""
+
+#: sidebar-shop.php:38, sidebar.php:27
+msgid "Meta"
+msgstr ""
+
+#: sidebar-shop.php:51
+msgid "You haven't set any widget for Shop Sidebar. Please, add some widgets or choose Full width page in theme options or page custom meta settings."
+msgstr ""
+
+#: sidebar.php:40
+msgid "You haven't set any widget for Sidebar. Please, add some widgets or choose Full width page in theme options or page custom meta settings."
+msgstr ""
+
+#: single.php:101, inc/functions/post-meta.php:71
+msgid "by "
+msgstr ""
+
+#: single.php:102, inc/functions/post-meta.php:72, inc/functions/post-meta.php:98
+msgid "View all post by "
+msgstr ""
+
+#: site-map.php:8
+msgid "Site map"
+msgstr ""
+
+#: site-map.php:16
+msgid "Posts"
+msgstr ""
+
+#: site-map.php:44
+msgid "Pages"
+msgstr ""
+
+#: site-map.php:63
+msgid "Authors"
+msgstr ""
+
+#: tag.php:35
+msgid "Posts tagged with:"
+msgstr ""
+
+#: admin/admin-interface.php:104, admin/admin-interface.php:122
+msgid "Save All Changes"
+msgstr ""
+
+#: admin/admin-interface.php:123
+msgid "Options Reset"
+msgstr ""
+
+#: admin/admin-interface.php:745
+msgid "Click OK to backup your current saved options."
+msgstr ""
+
+#: admin/admin-interface.php:792
+msgid "Warning: All of your current options will be replaced with the data from your last backup! Proceed?"
+msgstr ""
+
+#: admin/admin-interface.php:931
+msgid "Click OK to reset. All settings will be lost!"
+msgstr ""
+
+#: admin/admin-interface.php:2356
+msgid "Last Backup : "
+msgstr ""
+
+#: woocommerce/add-to-wishlist-button.php:15
+msgid "Add to wishlist"
+msgstr ""
+
+#: woocommerce/add-to-wishlist.php:13
+msgid "Product added! Browse Wishlist"
+msgstr ""
+
+#: woocommerce/add-to-wishlist.php:14
+msgid "The product is already in the wishlist! Browse Wishlist"
+msgstr ""
+
+#: woocommerce/content-product.php:108, inc/blocks/as-ajax-prod-cats.php:833, inc/blocks/as-filter-products.php:662, inc/functions/ajax.php:203
+msgid "Quick view"
+msgstr ""
+
+#: woocommerce/popup-cart.php:51, woocommerce/popup-cart2_0.php:55
+msgid "No products in the cart."
+msgstr ""
+
+#: woocommerce/popup-cart.php:59, woocommerce/popup-cart2_0.php:63, woocommerce/cart/cart-totals.php:24
+msgid "Subtotal"
+msgstr ""
+
+#: woocommerce/popup-cart.php:64
+msgid "View Cart"
+msgstr ""
+
+#: woocommerce/popup-cart.php:65
+msgid "Checkout"
+msgstr ""
+
+#: woocommerce/popup-cart2_0.php:68
+msgid "View Cart &rarr;"
+msgstr ""
+
+#: woocommerce/popup-cart2_0.php:69
+msgid "Checkout &rarr;"
+msgstr ""
+
+#. translators: 1: reviews count 2: product name
+#: woocommerce/single-product-reviews.php:34
+msgid "%1$s review for %2$s"
+msgid_plural "%1$s reviews for %2$s"
+msgstr[0] ""
+msgstr[1] ""
+
+#: woocommerce/single-product-reviews.php:36
+msgid "Reviews"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:56
+msgid "Add Review"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:62
+msgid "There are no reviews yet, would you like to <a href=\"#review_form_wrapper\" class=\"inline show_review_form magnificpopup mfp-inline\">submit yours</a>?"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:78
+msgid "Add a review"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:78
+msgid "Be the first to review"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:79
+msgid "Leave a Reply to %s"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:83
+msgid "Name"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:85
+msgid "Email"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:88
+msgid "Submit"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:94
+msgid "You must be <a href=\"%s\">logged in</a> to post a review."
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:98
+msgid "Your Rating"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:99
+msgid "Rate&hellip;"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:100
+msgid "Perfect"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:101
+msgid "Good"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:102
+msgid "Average"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:103
+msgid "Not that bad"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:104
+msgid "Very Poor"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:108
+msgid "Your Review"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:117
+msgid "Only logged in customers who have purchased this product may leave a review."
+msgstr ""
+
+#: woocommerce/wishlist-view.php:28
+msgid "Edit title"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:37, woocommerce/myaccount/form-change-password.php:29
+msgid "Save"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:41, woocommerce/myaccount/my-orders.php:83
+msgid "Cancel"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:86
+msgid "Product Name"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:93
+msgid "Unit Price"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:106
+msgid "Stock Status"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:152, woocommerce/wishlist-view.php:247
+msgid "Remove this product"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:182
+msgid "Free!"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:193
+msgid "Out of Stock"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:196
+msgid "In Stock"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:215
+msgid "Move"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:227
+msgid "Shared"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:230
+msgid "Private"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:233
+msgid "Public"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:247, inc/Custom-Meta-Boxes/classes.fields.php:448, inc/Custom-Meta-Boxes/classes.fields.php:508
 msgid "Remove"
 msgstr ""
 
-#: inc/Custom-Meta-Boxes/classes.fields.php:496
-msgid "Add Image"
+#: woocommerce/wishlist-view.php:257
+msgid "No products were added to the wishlist"
 msgstr ""
 
-#: inc/Custom-Meta-Boxes/classes.fields.php:1011
-msgid "Type to search"
+#: woocommerce/wishlist-view.php:274
+msgid "Add the selected products to the cart"
 msgstr ""
 
-#: inc/Custom-Meta-Boxes/classes.fields.php:1365
-msgid "Add New Group"
+#: woocommerce/wishlist-view.php:282, woocommerce/wishlist-view.php:322
+msgid "Ask for an estimate"
+msgstr ""
+
+#: woocommerce/woocommerce-theme-edits.php:173, woocommerce/theme/plugins.php:57
+msgid "Search for products"
 msgstr ""
 
 #: inc/blocks/ajax_audio.php:59
@@ -187,9 +453,7 @@ msgstr ""
 msgid "Error fetching video. No video host or video id is provided."
 msgstr ""
 
-#: inc/blocks/as-ajax-cats.php:554 inc/blocks/as-filter-cats.php:443
-#: inc/blocks/as-filter-products.php:424
-#: inc/blocks/as-onepager-menu-block.php:448
+#: inc/blocks/as-ajax-cats.php:554, inc/blocks/as-filter-cats.php:443, inc/blocks/as-filter-products.php:424, inc/blocks/as-onepager-menu-block.php:448
 msgid "Toggle categories"
 msgstr ""
 
@@ -197,15 +461,15 @@ msgstr ""
 msgid "Loading ..."
 msgstr ""
 
-#: inc/blocks/as-ajax-cats.php:691 inc/blocks/as-ajax-prod-cats.php:717
+#: inc/blocks/as-ajax-cats.php:691, inc/blocks/as-ajax-prod-cats.php:717
 msgid "Reset categories"
 msgstr ""
 
-#: inc/blocks/as-ajax-prod-cats.php:188 inc/blocks/as-prod-cats.php:158
+#: inc/blocks/as-ajax-prod-cats.php:188, inc/blocks/as-prod-cats.php:158
 msgid "Text over category image color"
 msgstr ""
 
-#: inc/blocks/as-ajax-prod-cats.php:194 inc/blocks/as-prod-cats.php:164
+#: inc/blocks/as-ajax-prod-cats.php:194, inc/blocks/as-prod-cats.php:164
 msgid "Category image overlay color"
 msgstr ""
 
@@ -213,27 +477,19 @@ msgstr ""
 msgid "Loading products"
 msgstr ""
 
-#: inc/blocks/as-ajax-prod-cats.php:833 inc/blocks/as-filter-products.php:662
-#: inc/functions/ajax.php:203 woocommerce/content-product.php:108
-msgid "Quick view"
-msgstr ""
-
-#: inc/blocks/as-ajax-prod-cats.php:917 inc/functions/ajax.php:277
-msgid ""
-"AJAX PRODUCTS BLOCK DISABLED.<br> Sorry, it seems like WooCommerce is not "
-"active. Please install and activate last version of WooCommerce."
+#: inc/blocks/as-ajax-prod-cats.php:917, inc/functions/ajax.php:277
+msgid "AJAX PRODUCTS BLOCK DISABLED.<br> Sorry, it seems like WooCommerce is not active. Please install and activate last version of WooCommerce."
 msgstr ""
 
 #: inc/blocks/as-banner-block.php:135
 msgid "Block opacity"
 msgstr ""
 
-#: inc/blocks/as-banner-block.php:138 inc/blocks/as-banner-block.php:157
+#: inc/blocks/as-banner-block.php:138, inc/blocks/as-banner-block.php:157
 msgid "If zero or empty, it will be ignored"
 msgstr ""
 
-#: inc/blocks/as-banner-block.php:147 inc/blocks/as-row-block.php:85
-#: inc/blocks/as-row-block.php:411
+#: inc/blocks/as-banner-block.php:147, inc/blocks/as-row-block.php:85, inc/blocks/as-row-block.php:411
 msgid "Overlay color"
 msgstr ""
 
@@ -242,9 +498,7 @@ msgid "Overlay opacity"
 msgstr ""
 
 #: inc/blocks/as-clear-block.php:44
-msgid ""
-"Use this block to clear the floats between two or more separate blocks "
-"vertically."
+msgid "Use this block to clear the floats between two or more separate blocks vertically."
 msgstr ""
 
 #: inc/blocks/as-contactform-block.php:197
@@ -279,15 +533,15 @@ msgstr ""
 msgid "AS Visual Editor"
 msgstr ""
 
-#: inc/blocks/as-filter-cats.php:477 inc/blocks/as-filter-products.php:457
+#: inc/blocks/as-filter-cats.php:477, inc/blocks/as-filter-products.php:457
 msgid "Default sorting"
 msgstr ""
 
-#: inc/blocks/as-filter-cats.php:478 inc/blocks/as-filter-products.php:458
+#: inc/blocks/as-filter-cats.php:478, inc/blocks/as-filter-products.php:458
 msgid "Sort by Title "
 msgstr ""
 
-#: inc/blocks/as-filter-cats.php:479 inc/blocks/as-filter-products.php:459
+#: inc/blocks/as-filter-cats.php:479, inc/blocks/as-filter-products.php:459
 msgid "Sort by Date Created"
 msgstr ""
 
@@ -296,9 +550,7 @@ msgid "All"
 msgstr ""
 
 #: inc/blocks/as-filter-products.php:797
-msgid ""
-"FILTERED PRODUCTS BLOCK DISABLED.<br> Sorry, it seems like WooCommerce is "
-"not active. Please install and activate last version of WooCommerce."
+msgid "FILTERED PRODUCTS BLOCK DISABLED.<br> Sorry, it seems like WooCommerce is not active. Please install and activate last version of WooCommerce."
 msgstr ""
 
 #: inc/blocks/as-icon-block.php:168
@@ -322,9 +574,7 @@ msgid "Google maps error"
 msgstr ""
 
 #: inc/blocks/as-map-block.php:278
-msgid ""
-"Please check your address inputs - there's a probable error in data, or use "
-"manual longitude and latitude inputs."
+msgid "Please check your address inputs - there's a probable error in data, or use manual longitude and latitude inputs."
 msgstr ""
 
 #: inc/blocks/as-map-block.php:414
@@ -376,9 +626,7 @@ msgid "Item icon"
 msgstr ""
 
 #: inc/blocks/as-prod-cats.php:413
-msgid ""
-"PRODUCT CATEGORIES BLOCK DISABLED.<br> Sorry, it seems like WooCommerce is "
-"not active. Please install and activate last version of WooCommerce."
+msgid "PRODUCT CATEGORIES BLOCK DISABLED.<br> Sorry, it seems like WooCommerce is not active. Please install and activate last version of WooCommerce."
 msgstr ""
 
 #: inc/blocks/as-revolution-slider-block.php:53
@@ -389,27 +637,27 @@ msgstr ""
 msgid "Sorry! Revolution Slider is not Installed or Activated"
 msgstr ""
 
-#: inc/blocks/as-row-block.php:58 inc/blocks/as-row-block.php:382
+#: inc/blocks/as-row-block.php:58, inc/blocks/as-row-block.php:382
 msgid "ROW BLOCK"
 msgstr ""
 
-#: inc/blocks/as-row-block.php:59 inc/blocks/as-row-block.php:384
+#: inc/blocks/as-row-block.php:59, inc/blocks/as-row-block.php:384
 msgid "Row settings"
 msgstr ""
 
-#: inc/blocks/as-row-block.php:68 inc/blocks/as-row-block.php:395
+#: inc/blocks/as-row-block.php:68, inc/blocks/as-row-block.php:395
 msgid "Titles color"
 msgstr ""
 
-#: inc/blocks/as-row-block.php:73 inc/blocks/as-row-block.php:401
+#: inc/blocks/as-row-block.php:73, inc/blocks/as-row-block.php:401
 msgid "Text color"
 msgstr ""
 
-#: inc/blocks/as-row-block.php:78 inc/blocks/as-row-block.php:406
+#: inc/blocks/as-row-block.php:78, inc/blocks/as-row-block.php:406
 msgid "Links color"
 msgstr ""
 
-#: inc/blocks/as-row-block.php:166 inc/blocks/as-row-block.php:492
+#: inc/blocks/as-row-block.php:166, inc/blocks/as-row-block.php:492
 msgid "Full width content in row ?"
 msgstr ""
 
@@ -417,11 +665,11 @@ msgstr ""
 msgid "Equalize inner blocks heights"
 msgstr ""
 
-#: inc/blocks/as-row-block.php:176 inc/blocks/as-row-block.php:502
+#: inc/blocks/as-row-block.php:176, inc/blocks/as-row-block.php:502
 msgid "Remove side gutter"
 msgstr ""
 
-#: inc/blocks/as-row-block.php:181 inc/blocks/as-row-block.php:507
+#: inc/blocks/as-row-block.php:181, inc/blocks/as-row-block.php:507
 msgid "Remove bottom gutter"
 msgstr ""
 
@@ -429,42 +677,37 @@ msgstr ""
 msgid "Equalize inner blocks heights ?"
 msgstr ""
 
-#: inc/blocks/as-single-product-block.php:229
-#: inc/blocks/as-single-product-block.php:461
-msgid ""
-"SINGLE PRODUCT BLOCK DISABLED.<br> Sorry, it seems like WooCommerce plugin "
-"is not active. Please install and activate last version of WooCommerce."
+#: inc/blocks/as-single-product-block.php:229, inc/blocks/as-single-product-block.php:461
+msgid "SINGLE PRODUCT BLOCK DISABLED.<br> Sorry, it seems like WooCommerce plugin is not active. Please install and activate last version of WooCommerce."
 msgstr ""
 
 #: inc/blocks/as-single-product-block.php:318
 msgid "Out of stock"
 msgstr ""
 
-#: inc/functions/BFI_Thumb.php:148
-msgid ""
-"The server does not have ImageMagick or GD installed and/or enabled! Any of "
-"these libraries are required for WordPress to be able to resize images. "
-"Please contact your server administrator to enable this before continuing."
+#: inc/Custom-Meta-Boxes/classes.fields.php:361
+msgid "Add New"
 msgstr ""
 
-#: inc/functions/BFI_Thumb.php:276
-msgid "Image rotate failed."
+#: inc/Custom-Meta-Boxes/classes.fields.php:430
+msgid "Add File"
 msgstr ""
 
-#: inc/functions/BFI_Thumb.php:299
-msgid "Image opacity change failed."
+#: inc/Custom-Meta-Boxes/classes.fields.php:496
+msgid "Add Image"
 msgstr ""
 
-#: inc/functions/BFI_Thumb.php:386
-msgid "Image color change failed."
+#: inc/Custom-Meta-Boxes/classes.fields.php:990
+msgctxt "select field"
+msgid "None"
 msgstr ""
 
-#: inc/functions/BFI_Thumb.php:403
-msgid "Image grayscale failed."
+#: inc/Custom-Meta-Boxes/classes.fields.php:1011
+msgid "Type to search"
 msgstr ""
 
-#: inc/functions/BFI_Thumb.php:420
-msgid "Image negate failed."
+#: inc/Custom-Meta-Boxes/classes.fields.php:1365
+msgid "Add New Group"
 msgstr ""
 
 #: inc/functions/admin_functions.php:15
@@ -475,8 +718,7 @@ msgstr ""
 msgid "Content"
 msgstr ""
 
-#: inc/functions/admin_functions.php:178
-#: woocommerce/single-product/add-to-cart/variable.php:85
+#: inc/functions/admin_functions.php:178, woocommerce/single-product/add-to-cart/variable.php:85
 msgid "Clear"
 msgstr ""
 
@@ -557,16 +799,14 @@ msgid "Thumbnails columns (if there are more then one attached image)"
 msgstr ""
 
 #: inc/functions/as-meta-boxes.php:105
-msgid ""
-"type in the number of thumbnails in a row. If left empty, the default "
-"number of <strong>3</strong> will be set"
+msgid "type in the number of thumbnails in a row. If left empty, the default number of <strong>3</strong> will be set"
 msgstr ""
 
 #: inc/functions/as-meta-boxes.php:113
 msgid "Slider navigation"
 msgstr ""
 
-#: inc/functions/as-meta-boxes.php:114 inc/functions/as-meta-boxes.php:122
+#: inc/functions/as-meta-boxes.php:114, inc/functions/as-meta-boxes.php:122
 msgid "add previous/next arrows (appear on hover)"
 msgstr ""
 
@@ -631,9 +871,7 @@ msgid "Video host site"
 msgstr ""
 
 #: inc/functions/as-meta-boxes.php:221
-msgid ""
-"choose the video host service site to fetch the video from (YouTube, Vimeo "
-"etc...)"
+msgid "choose the video host service site to fetch the video from (YouTube, Vimeo etc...)"
 msgstr ""
 
 #: inc/functions/as-meta-boxes.php:238
@@ -665,11 +903,7 @@ msgid "Featured image or video thumbnails"
 msgstr ""
 
 #: inc/functions/as-meta-boxes.php:263
-msgid ""
-"show post featured image or fetch thumbnail of video from video host "
-"service.<br /><strong>NOTE: some services do not provide high resolution "
-"image so it is advisable to use featured image. Supported: YouTube, "
-"Screenr, Vimeo, Daily Motion and BlipTV</strong>"
+msgid "show post featured image or fetch thumbnail of video from video host service.<br /><strong>NOTE: some services do not provide high resolution image so it is advisable to use featured image. Supported: YouTube, Screenr, Vimeo, Daily Motion and BlipTV</strong>"
 msgstr ""
 
 #: inc/functions/as-meta-boxes.php:267
@@ -701,9 +935,7 @@ msgid "Avatar email for avatar image"
 msgstr ""
 
 #: inc/functions/as-meta-boxes.php:301
-msgid ""
-"If quote author uses gravatar.com quote author avatar can be displayed. If "
-"set, it will override the featured image."
+msgid "If quote author uses gravatar.com quote author avatar can be displayed. If set, it will override the featured image."
 msgstr ""
 
 #: inc/functions/as-meta-boxes.php:318
@@ -739,9 +971,7 @@ msgid "Button URL"
 msgstr ""
 
 #: inc/functions/as-meta-boxes.php:385
-msgid ""
-"If no url or no button label (next input field), no button will be "
-"displayed."
+msgid "If no url or no button label (next input field), no button will be displayed."
 msgstr ""
 
 #: inc/functions/as-meta-boxes.php:392
@@ -749,9 +979,7 @@ msgid "Button label"
 msgstr ""
 
 #: inc/functions/as-meta-boxes.php:393
-msgid ""
-"If no label or no button url (previous input field), no button will be "
-"displayed."
+msgid "If no label or no button url (previous input field), no button will be displayed."
 msgstr ""
 
 #: inc/functions/as-meta-boxes.php:401
@@ -778,6 +1006,30 @@ msgstr ""
 msgid "Background image size"
 msgstr ""
 
+#: inc/functions/BFI_Thumb.php:148
+msgid "The server does not have ImageMagick or GD installed and/or enabled! Any of these libraries are required for WordPress to be able to resize images. Please contact your server administrator to enable this before continuing."
+msgstr ""
+
+#: inc/functions/BFI_Thumb.php:276
+msgid "Image rotate failed."
+msgstr ""
+
+#: inc/functions/BFI_Thumb.php:299
+msgid "Image opacity change failed."
+msgstr ""
+
+#: inc/functions/BFI_Thumb.php:386
+msgid "Image color change failed."
+msgstr ""
+
+#: inc/functions/BFI_Thumb.php:403
+msgid "Image grayscale failed."
+msgstr ""
+
+#: inc/functions/BFI_Thumb.php:420
+msgid "Image negate failed."
+msgstr ""
+
 #: inc/functions/breadcrumbs.php:7
 msgid "Home"
 msgstr ""
@@ -798,11 +1050,11 @@ msgstr ""
 msgid "Articles Posted by %s"
 msgstr ""
 
-#: inc/functions/breadcrumbs.php:12 woocommerce/shop/breadcrumb.php:147
+#: inc/functions/breadcrumbs.php:12, woocommerce/shop/breadcrumb.php:147
 msgid "Error 404"
 msgstr ""
 
-#: inc/functions/breadcrumbs.php:176 woocommerce/shop/breadcrumb.php:203
+#: inc/functions/breadcrumbs.php:176, woocommerce/shop/breadcrumb.php:203
 msgid "Page"
 msgstr ""
 
@@ -819,7 +1071,6 @@ msgid "Comment author"
 msgstr ""
 
 #: inc/functions/comments.php:41
-#. translators: 1: date, 2: time
 msgid "%1$s <span class=\"icon-clock-2 comment-icons\"></span> %2$s"
 msgstr ""
 
@@ -827,7 +1078,7 @@ msgstr ""
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: inc/functions/comments.php:53 woocommerce/myaccount/my-address.php:51
+#: inc/functions/comments.php:53, woocommerce/myaccount/my-address.php:51
 msgid "Edit"
 msgstr ""
 
@@ -867,7 +1118,7 @@ msgstr ""
 msgid "Select icon for item"
 msgstr ""
 
-#: inc/functions/menus.php:392 inc/functions/misc_post_functions.php:26
+#: inc/functions/menus.php:392, inc/functions/misc_post_functions.php:26
 msgid "Read more"
 msgstr ""
 
@@ -899,136 +1150,95 @@ msgstr ""
 msgid "&raquo;"
 msgstr ""
 
-#: inc/functions/post-meta.php:71 single.php:101
-msgid "by "
-msgstr ""
-
-#: inc/functions/post-meta.php:72 inc/functions/post-meta.php:98 single.php:102
-msgid "View all post by "
-msgstr ""
-
 #: inc/functions/post-meta.php:223
 msgid "More ..."
 msgstr ""
 
-#: inc/functions/theme_inc_plugins.php:127
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:333
+#: inc/functions/theme_inc_plugins.php:135, inc/tgm-plugin-activation/class-tgm-plugin-activation.php:333
 msgid "Install Required Plugins"
 msgstr ""
 
-#: inc/functions/theme_inc_plugins.php:128
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:334
+#: inc/functions/theme_inc_plugins.php:136, inc/tgm-plugin-activation/class-tgm-plugin-activation.php:334
 msgid "Install Plugins"
 msgstr ""
 
-#: inc/functions/theme_inc_plugins.php:129
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:335
+#: inc/functions/theme_inc_plugins.php:137, inc/tgm-plugin-activation/class-tgm-plugin-activation.php:335
 msgid "Installing Plugin: %s"
 msgstr ""
 
-#: inc/functions/theme_inc_plugins.php:130
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:336
+#: inc/functions/theme_inc_plugins.php:138, inc/tgm-plugin-activation/class-tgm-plugin-activation.php:336
 msgid "Something went wrong with the plugin API."
 msgstr ""
 
-#: inc/functions/theme_inc_plugins.php:131
+#: inc/functions/theme_inc_plugins.php:139
 msgid "Sequoia theme requires the following plugin: %1$s."
 msgid_plural "Sequoia theme requires the following plugins: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/functions/theme_inc_plugins.php:132
+#: inc/functions/theme_inc_plugins.php:140
 msgid "Sequoia theme recommends the following plugin: %1$s."
 msgid_plural "Sequoia theme recommends the following plugins: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/functions/theme_inc_plugins.php:133
-msgid ""
-"Sorry, but you do not have the correct permissions to install the %s "
-"plugin. Contact the administrator of this site for help on getting the "
-"plugin installed."
-msgid_plural ""
-"Sorry, but you do not have the correct permissions to install the %s "
-"plugins. Contact the administrator of this site for help on getting the "
-"plugins installed."
+#: inc/functions/theme_inc_plugins.php:141
+msgid "Sorry, but you do not have the correct permissions to install the %s plugin. Contact the administrator of this site for help on getting the plugin installed."
+msgid_plural "Sorry, but you do not have the correct permissions to install the %s plugins. Contact the administrator of this site for help on getting the plugins installed."
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/functions/theme_inc_plugins.php:134
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:367
+#: inc/functions/theme_inc_plugins.php:142, inc/tgm-plugin-activation/class-tgm-plugin-activation.php:367
 msgid "The following required plugin is currently inactive: %1$s."
 msgid_plural "The following required plugins are currently inactive: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/functions/theme_inc_plugins.php:135
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:372
+#: inc/functions/theme_inc_plugins.php:143, inc/tgm-plugin-activation/class-tgm-plugin-activation.php:372
 msgid "The following recommended plugin is currently inactive: %1$s."
 msgid_plural "The following recommended plugins are currently inactive: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/functions/theme_inc_plugins.php:136
-msgid ""
-"Sorry, but you do not have the correct permissions to activate the %s "
-"plugin. Contact the administrator of this site for help on getting the "
-"plugin activated."
-msgid_plural ""
-"Sorry, but you do not have the correct permissions to activate the %s "
-"plugins. Contact the administrator of this site for help on getting the "
-"plugins activated."
+#: inc/functions/theme_inc_plugins.php:144
+msgid "Sorry, but you do not have the correct permissions to activate the %s plugin. Contact the administrator of this site for help on getting the plugin activated."
+msgid_plural "Sorry, but you do not have the correct permissions to activate the %s plugins. Contact the administrator of this site for help on getting the plugins activated."
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/functions/theme_inc_plugins.php:137
-msgid ""
-"The following plugin needs to be updated to its latest version to ensure "
-"maximum compatibility with sequoia theme: %1$s."
-msgid_plural ""
-"The following plugins need to be updated to their latest version to ensure "
-"maximum compatibility with sequoia theme: %1$s."
+#: inc/functions/theme_inc_plugins.php:145
+msgid "The following plugin needs to be updated to its latest version to ensure maximum compatibility with sequoia theme: %1$s."
+msgid_plural "The following plugins need to be updated to their latest version to ensure maximum compatibility with sequoia theme: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/functions/theme_inc_plugins.php:138
-msgid ""
-"Sorry, but you do not have the correct permissions to update the %s plugin. "
-"Contact the administrator of this site for help on getting the plugin "
-"updated."
-msgid_plural ""
-"Sorry, but you do not have the correct permissions to update the %s "
-"plugins. Contact the administrator of this site for help on getting the "
-"plugins updated."
+#: inc/functions/theme_inc_plugins.php:146
+msgid "Sorry, but you do not have the correct permissions to update the %s plugin. Contact the administrator of this site for help on getting the plugin updated."
+msgid_plural "Sorry, but you do not have the correct permissions to update the %s plugins. Contact the administrator of this site for help on getting the plugins updated."
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/functions/theme_inc_plugins.php:139
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:382
+#: inc/functions/theme_inc_plugins.php:147, inc/tgm-plugin-activation/class-tgm-plugin-activation.php:382
 msgid "Begin installing plugin"
 msgid_plural "Begin installing plugins"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/functions/theme_inc_plugins.php:140
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:392
+#: inc/functions/theme_inc_plugins.php:148, inc/tgm-plugin-activation/class-tgm-plugin-activation.php:392
 msgid "Begin activating plugin"
 msgid_plural "Begin activating plugins"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/functions/theme_inc_plugins.php:141
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:397
+#: inc/functions/theme_inc_plugins.php:149, inc/tgm-plugin-activation/class-tgm-plugin-activation.php:397
 msgid "Return to Required Plugins Installer"
 msgstr ""
 
-#: inc/functions/theme_inc_plugins.php:142
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:399
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3021
+#: inc/functions/theme_inc_plugins.php:150, inc/tgm-plugin-activation/class-tgm-plugin-activation.php:399, inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3021
 msgid "Plugin activated successfully."
 msgstr ""
 
-#: inc/functions/theme_inc_plugins.php:143
+#: inc/functions/theme_inc_plugins.php:151
 msgid "All plugins installed and activated successfully. %s"
 msgstr ""
 
@@ -1089,22 +1299,14 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:347
-msgid ""
-"Sorry, but you do not have the correct permissions to install the %1$s "
-"plugin."
-msgid_plural ""
-"Sorry, but you do not have the correct permissions to install the %1$s "
-"plugins."
+msgid "Sorry, but you do not have the correct permissions to install the %1$s plugin."
+msgid_plural "Sorry, but you do not have the correct permissions to install the %1$s plugins."
 msgstr[0] ""
 msgstr[1] ""
 
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:352
-msgid ""
-"The following plugin needs to be updated to its latest version to ensure "
-"maximum compatibility with this theme: %1$s."
-msgid_plural ""
-"The following plugins need to be updated to their latest version to ensure "
-"maximum compatibility with this theme: %1$s."
+msgid "The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s."
+msgid_plural "The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s."
 msgstr[0] ""
 msgstr[1] ""
 
@@ -1115,22 +1317,14 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:362
-msgid ""
-"Sorry, but you do not have the correct permissions to update the %1$s "
-"plugin."
-msgid_plural ""
-"Sorry, but you do not have the correct permissions to update the %1$s "
-"plugins."
+msgid "Sorry, but you do not have the correct permissions to update the %1$s plugin."
+msgid_plural "Sorry, but you do not have the correct permissions to update the %1$s plugins."
 msgstr[0] ""
 msgstr[1] ""
 
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:377
-msgid ""
-"Sorry, but you do not have the correct permissions to activate the %1$s "
-"plugin."
-msgid_plural ""
-"Sorry, but you do not have the correct permissions to activate the %1$s "
-"plugins."
+msgid "Sorry, but you do not have the correct permissions to activate the %1$s plugin."
+msgid_plural "Sorry, but you do not have the correct permissions to activate the %1$s plugins."
 msgstr[0] ""
 msgstr[1] ""
 
@@ -1144,19 +1338,18 @@ msgstr[1] ""
 msgid "Return to the dashboard"
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:400
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2824
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:400, inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2824
 msgid "The following plugin was activated successfully:"
-msgstr ""
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] ""
+msgstr[1] ""
 
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:401
 msgid "No action taken. Plugin %1$s was already active."
 msgstr ""
 
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:402
-msgid ""
-"Plugin not activated. A higher version of %s is needed for this theme. "
-"Please update the plugin."
+msgid "Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin."
 msgstr ""
 
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:403
@@ -1179,28 +1372,30 @@ msgstr ""
 msgid "Update Required"
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:820
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3430
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:820, inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3430
 msgid "Return to the Dashboard"
 msgstr ""
 
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:927
-msgid ""
-"The remote plugin package does not contain a folder with the desired slug "
-"and renaming did not work."
+msgid "The remote plugin package does not contain a folder with the desired slug and renaming did not work."
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:927
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:930
-msgid ""
-"Please contact the plugin provider and ask them to package their plugin "
-"according to the WordPress guidelines."
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:927, inc/tgm-plugin-activation/class-tgm-plugin-activation.php:930
+msgid "Please contact the plugin provider and ask them to package their plugin according to the WordPress guidelines."
 msgstr ""
 
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:930
-msgid ""
-"The remote plugin package consists of more than one file, but the files are "
-"not packaged in a folder."
+msgid "The remote plugin package consists of more than one file, but the files are not packaged in a folder."
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:1108, inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2820
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:1873
+msgctxt "%s = version number"
+msgid "TGMPA v%s"
 msgstr ""
 
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2159
@@ -1247,6 +1442,18 @@ msgstr ""
 msgid "Update recommended"
 msgstr ""
 
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2227
+msgctxt "%1$s = install status, %2$s = update status"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2272
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2275
 msgid "To Install <span class=\"count\">(%s)</span>"
 msgid_plural "To Install <span class=\"count\">(%s)</span>"
@@ -1265,6 +1472,11 @@ msgid_plural "To Activate <span class=\"count\">(%s)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2363
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr ""
+
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2371
 msgid "Installed version:"
 msgstr ""
@@ -1278,9 +1490,7 @@ msgid "Available version:"
 msgstr ""
 
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2414
-msgid ""
-"No plugins to install, update or activate. <a href=\"%1$s\">Return to the "
-"Dashboard</a>"
+msgid "No plugins to install, update or activate. <a href=\"%1$s\">Return to the Dashboard</a>"
 msgstr ""
 
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2428
@@ -1299,9 +1509,23 @@ msgstr ""
 msgid "Version"
 msgstr ""
 
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2435
-#: woocommerce/myaccount/my-orders.php:19
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2435, woocommerce/myaccount/my-orders.php:19
 msgid "Status"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2483
+msgctxt "%2$s = plugin name in screen reader markup"
+msgid "Install %2$s"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2487
+msgctxt "%2$s = plugin name in screen reader markup"
+msgid "Update %2$s"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2492
+msgctxt "%2$s = plugin name in screen reader markup"
+msgid "Activate %2$s"
 msgstr ""
 
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2562
@@ -1361,9 +1585,7 @@ msgid "The installation of %1$s failed."
 msgstr ""
 
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3361
-msgid ""
-"The installation and activation process is starting. This process may take "
-"a while on some hosts, so please be patient."
+msgid "The installation and activation process is starting. This process may take a while on some hosts, so please be patient."
 msgstr ""
 
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3362
@@ -1379,9 +1601,7 @@ msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3367
-msgid ""
-"The installation process is starting. This process may take a while on some "
-"hosts, so please be patient."
+msgid "The installation process is starting. This process may take a while on some hosts, so please be patient."
 msgstr ""
 
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:3368
@@ -1400,14 +1620,11 @@ msgstr ""
 msgid "Recent"
 msgstr ""
 
-#: inc/widgets/latest-custom-posts.php:118
-#: inc/widgets/widget_featured_images.php:227
-#: inc/widgets/widget_latest_images.php:206 inc/widgets/widget_social.php:300
+#: inc/widgets/latest-custom-posts.php:118, inc/widgets/widget_featured_images.php:227, inc/widgets/widget_latest_images.php:206, inc/widgets/widget_social.php:300
 msgid "Title:"
 msgstr ""
 
-#: inc/widgets/latest-custom-posts.php:123
-#: inc/widgets/widget_latest_images.php:218
+#: inc/widgets/latest-custom-posts.php:123, inc/widgets/widget_latest_images.php:218
 msgid "Post type(s):"
 msgstr ""
 
@@ -1427,8 +1644,7 @@ msgstr ""
 msgid "Featured content images"
 msgstr ""
 
-#: inc/widgets/widget_featured_images.php:233
-#: inc/widgets/widget_latest_images.php:212
+#: inc/widgets/widget_featured_images.php:233, inc/widgets/widget_latest_images.php:212
 msgid "Number of images:"
 msgstr ""
 
@@ -1436,13 +1652,11 @@ msgstr ""
 msgid "Post type:"
 msgstr ""
 
-#: inc/widgets/widget_featured_images.php:257
-#: inc/widgets/widget_latest_images.php:236
+#: inc/widgets/widget_featured_images.php:257, inc/widgets/widget_latest_images.php:236
 msgid "Image sizes:"
 msgstr ""
 
-#: inc/widgets/widget_featured_images.php:282
-#: inc/widgets/widget_latest_images.php:261
+#: inc/widgets/widget_featured_images.php:282, inc/widgets/widget_latest_images.php:261
 msgid "Image width in <b>px</b> or <b>%</b> (height is set auto):"
 msgstr ""
 
@@ -1530,113 +1744,6 @@ msgstr ""
 msgid "Skype link:"
 msgstr ""
 
-#: index.php:72 page-of-posts.php:120
-msgid "No posts to display"
-msgstr ""
-
-#: index.php:76 page-of-posts.php:124
-msgid "Ready to publish your first post? <a href=\"%s\">Get started here</a>."
-msgstr ""
-
-#: index.php:84 page-of-posts.php:130
-msgid "No posts found on this site"
-msgstr ""
-
-#: index.php:89 page-of-posts.php:134
-msgid "We are sorry, but no results were found. Try search ti find a related post."
-msgstr ""
-
-#: portfolio-related.php:52
-msgid "Related portfolio projects"
-msgstr ""
-
-#: search.php:42
-msgid "Search result:"
-msgstr ""
-
-#: search.php:62
-msgid "Your search \""
-msgstr ""
-
-#: search.php:62
-msgid "\" did not return any result."
-msgstr ""
-
-#: search.php:65
-msgid ""
-"<ul><li>Please, try to:</li><li>click browser \"Back\" button,</li><li>use "
-"search to find what are you looking for,</li><li>use menu to browse our "
-"site,</li><li>or use sitemap bellow this message.</li></ul> "
-msgstr ""
-
-#: searchform-menu.php:5
-msgid "Search here ..."
-msgstr ""
-
-#: searchform.php:5
-msgid "Type here ..."
-msgstr ""
-
-#: searchform.php:7
-msgid "Search"
-msgstr ""
-
-#: sidebar-shop.php:38 sidebar.php:27
-msgid "Meta"
-msgstr ""
-
-#: sidebar-shop.php:51
-msgid ""
-"You haven't set any widget for Shop Sidebar. Please, add some widgets or "
-"choose Full width page in theme options or page custom meta settings."
-msgstr ""
-
-#: sidebar.php:40
-msgid ""
-"You haven't set any widget for Sidebar. Please, add some widgets or choose "
-"Full width page in theme options or page custom meta settings."
-msgstr ""
-
-#: site-map.php:8
-msgid "Site map"
-msgstr ""
-
-#: site-map.php:16
-msgid "Posts"
-msgstr ""
-
-#: site-map.php:44
-msgid "Pages"
-msgstr ""
-
-#: site-map.php:63
-msgid "Authors"
-msgstr ""
-
-#: tag.php:35
-msgid "Posts tagged with:"
-msgstr ""
-
-#: woocommerce/add-to-wishlist-button.php:15
-msgid "Add to wishlist"
-msgstr ""
-
-#: woocommerce/add-to-wishlist.php:13
-msgid "Product added! Browse Wishlist"
-msgstr ""
-
-#: woocommerce/add-to-wishlist.php:14
-msgid "The product is already in the wishlist! Browse Wishlist"
-msgstr ""
-
-#: woocommerce/archive-product.php:101
-msgid "Product filters"
-msgstr ""
-
-#: woocommerce/archive-product.php:135
-msgid "Product categories"
-msgstr ""
-
 #: woocommerce/cart/cart-empty.php:35
 msgid "Your cart is currently empty."
 msgstr ""
@@ -1649,18 +1756,11 @@ msgstr ""
 msgid "Cart Totals"
 msgstr ""
 
-#: woocommerce/cart/cart-totals.php:24 woocommerce/checkout/review-order.php:52
-#: woocommerce/popup-cart.php:59 woocommerce/popup-cart2_0.php:63
-msgid "Subtotal"
-msgstr ""
-
 #: woocommerce/cart/cart-totals.php:46
 msgid "Shipping"
 msgstr ""
 
-#: woocommerce/cart/cart-totals.php:78 woocommerce/checkout/review-order.php:19
-#: woocommerce/checkout/review-order.php:106
-#: woocommerce/myaccount/my-orders.php:20
+#: woocommerce/cart/cart-totals.php:78, woocommerce/myaccount/my-orders.php:20
 msgid "Total"
 msgstr ""
 
@@ -1669,9 +1769,7 @@ msgid " (taxes estimated for %s)"
 msgstr ""
 
 #: woocommerce/cart/cart-totals.php:100
-msgid ""
-"Note: Shipping and taxes are estimated%s and will be updated during "
-"checkout based on your billing and shipping information."
+msgid "Note: Shipping and taxes are estimated%s and will be updated during checkout based on your billing and shipping information."
 msgstr ""
 
 #: woocommerce/cart/cross-sells.php:29
@@ -1679,9 +1777,7 @@ msgid "You may be interested in&hellip;"
 msgstr ""
 
 #: woocommerce/checkout/cart-errors.php:18
-msgid ""
-"There are some issues with the items in your cart (shown above). Please go "
-"back to the cart page and resolve these issues before checking out."
+msgid "There are some issues with the items in your cart (shown above). Please go back to the cart page and resolve these issues before checking out."
 msgstr ""
 
 #: woocommerce/checkout/cart-errors.php:22
@@ -1696,42 +1792,6 @@ msgstr ""
 msgid "Your order"
 msgstr ""
 
-#: woocommerce/checkout/form-coupon.php:18
-msgid "Have a coupon?"
-msgstr ""
-
-#: woocommerce/checkout/form-coupon.php:18
-msgid "Click here to enter your code"
-msgstr ""
-
-#: woocommerce/checkout/form-coupon.php:25
-msgid "Coupon code"
-msgstr ""
-
-#: woocommerce/checkout/form-coupon.php:29
-msgid "Apply Coupon"
-msgstr ""
-
-#: woocommerce/checkout/form-pay.php:20
-#: woocommerce/checkout/review-order.php:18
-msgid "Product"
-msgstr ""
-
-#: woocommerce/checkout/form-pay.php:21
-msgid "Qty"
-msgstr ""
-
-#: woocommerce/checkout/form-pay.php:22
-msgid "Totals"
-msgstr ""
-
-#: woocommerce/checkout/form-pay.php:60
-msgid ""
-"Sorry, it seems that there are no available payment methods for your "
-"location. Please contact us if you require assistance or wish to make "
-"alternate arrangements."
-msgstr ""
-
 #: woocommerce/myaccount/form-change-password.php:20
 msgid "New password"
 msgstr ""
@@ -1740,45 +1800,7 @@ msgstr ""
 msgid "Re-enter new password"
 msgstr ""
 
-#: woocommerce/myaccount/form-change-password.php:29
-#: woocommerce/wishlist-view.php:37
-msgid "Save"
-msgstr ""
-
-#: woocommerce/myaccount/form-edit-account.php:30
-msgid "First name"
-msgstr ""
-
-#: woocommerce/myaccount/form-edit-account.php:34
-msgid "Last name"
-msgstr ""
-
-#: woocommerce/myaccount/form-edit-account.php:38
-msgid "Email address"
-msgstr ""
-
-#: woocommerce/myaccount/form-edit-account.php:43
-msgid "Password Change"
-msgstr ""
-
-#: woocommerce/myaccount/form-edit-account.php:46
-msgid "Current Password (leave blank to leave unchanged)"
-msgstr ""
-
-#: woocommerce/myaccount/form-edit-account.php:50
-msgid "New Password (leave blank to leave unchanged)"
-msgstr ""
-
-#: woocommerce/myaccount/form-edit-account.php:54
-msgid "Confirm New Password"
-msgstr ""
-
-#: woocommerce/myaccount/form-edit-account.php:63
-msgid "Save changes"
-msgstr ""
-
-#: woocommerce/myaccount/my-address.php:27
-#: woocommerce/myaccount/my-address.php:32
+#: woocommerce/myaccount/my-address.php:27, woocommerce/myaccount/my-address.php:32
 msgid "Billing Address"
 msgstr ""
 
@@ -1806,6 +1828,11 @@ msgstr ""
 msgid "Recent Orders"
 msgstr ""
 
+#: woocommerce/myaccount/my-orders.php:58
+msgctxt "hash before order number"
+msgid "#"
+msgstr ""
+
 #: woocommerce/myaccount/my-orders.php:68
 msgid "%s for %s item"
 msgid_plural "%s for %s items"
@@ -1820,35 +1847,11 @@ msgstr ""
 msgid "View"
 msgstr ""
 
-#: woocommerce/myaccount/my-orders.php:83 woocommerce/wishlist-view.php:41
-msgid "Cancel"
-msgstr ""
-
-#: woocommerce/popup-cart.php:51 woocommerce/popup-cart2_0.php:55
-msgid "No products in the cart."
-msgstr ""
-
-#: woocommerce/popup-cart.php:64
-msgid "View Cart"
-msgstr ""
-
-#: woocommerce/popup-cart.php:65
-msgid "Checkout"
-msgstr ""
-
-#: woocommerce/popup-cart2_0.php:68
-msgid "View Cart &rarr;"
-msgstr ""
-
-#: woocommerce/popup-cart2_0.php:69
-msgid "Checkout &rarr;"
-msgstr ""
-
 #: woocommerce/shop/breadcrumb.php:63
 msgid "Products tagged &ldquo;"
 msgstr ""
 
-#: woocommerce/shop/breadcrumb.php:91 woocommerce/shop/breadcrumb.php:189
+#: woocommerce/shop/breadcrumb.php:91, woocommerce/shop/breadcrumb.php:189
 msgid "Search results for &ldquo;"
 msgstr ""
 
@@ -1860,19 +1863,13 @@ msgstr ""
 msgid "Author:"
 msgstr ""
 
-#: woocommerce/single-product/add-to-cart/variable.php:74
-msgid "This product is currently out of stock and unavailable."
-msgstr ""
-
-#: woocommerce/single-product/meta.php:33
-#: woocommerce/single-product/meta.php:42
+#: woocommerce/single-product/meta.php:33, woocommerce/single-product/meta.php:42
 msgid "Category:"
 msgid_plural "Categories:"
 msgstr[0] ""
 msgstr[1] ""
 
-#: woocommerce/single-product/meta.php:36
-#: woocommerce/single-product/meta.php:45
+#: woocommerce/single-product/meta.php:36, woocommerce/single-product/meta.php:45
 msgid "Tag:"
 msgid_plural "Tags:"
 msgstr[0] ""
@@ -1892,6 +1889,14 @@ msgstr ""
 
 #: woocommerce/single-product/related.php:71
 msgid "Related Products"
+msgstr ""
+
+#: woocommerce/theme/segments.php:51
+msgid "Product filters"
+msgstr ""
+
+#: woocommerce/single-product/add-to-cart/variable.php:74
+msgid "This product is currently out of stock and unavailable."
 msgstr ""
 
 #: woocommerce/single-product/tabs/additional-information.php:25
@@ -1924,265 +1929,4 @@ msgstr ""
 
 #: woocommerce/single-product/tabs/description.php:14
 msgid "Product Description"
-msgstr ""
-
-#: woocommerce/single-product-reviews.php:34
-#. translators: 1: reviews count 2: product name
-msgid "%1$s review for %2$s"
-msgid_plural "%1$s reviews for %2$s"
-msgstr[0] ""
-msgstr[1] ""
-
-#: woocommerce/single-product-reviews.php:36
-msgid "Reviews"
-msgstr ""
-
-#: woocommerce/single-product-reviews.php:56
-msgid "Add Review"
-msgstr ""
-
-#: woocommerce/single-product-reviews.php:62
-msgid ""
-"There are no reviews yet, would you like to <a "
-"href=\"#review_form_wrapper\" class=\"inline show_review_form magnificpopup "
-"mfp-inline\">submit yours</a>?"
-msgstr ""
-
-#: woocommerce/single-product-reviews.php:78
-msgid "Add a review"
-msgstr ""
-
-#: woocommerce/single-product-reviews.php:78
-msgid "Be the first to review"
-msgstr ""
-
-#: woocommerce/single-product-reviews.php:79
-msgid "Leave a Reply to %s"
-msgstr ""
-
-#: woocommerce/single-product-reviews.php:83
-msgid "Name"
-msgstr ""
-
-#: woocommerce/single-product-reviews.php:85
-msgid "Email"
-msgstr ""
-
-#: woocommerce/single-product-reviews.php:88
-msgid "Submit"
-msgstr ""
-
-#: woocommerce/single-product-reviews.php:94
-msgid "You must be <a href=\"%s\">logged in</a> to post a review."
-msgstr ""
-
-#: woocommerce/single-product-reviews.php:98
-msgid "Your Rating"
-msgstr ""
-
-#: woocommerce/single-product-reviews.php:99
-msgid "Rate&hellip;"
-msgstr ""
-
-#: woocommerce/single-product-reviews.php:100
-msgid "Perfect"
-msgstr ""
-
-#: woocommerce/single-product-reviews.php:101
-msgid "Good"
-msgstr ""
-
-#: woocommerce/single-product-reviews.php:102
-msgid "Average"
-msgstr ""
-
-#: woocommerce/single-product-reviews.php:103
-msgid "Not that bad"
-msgstr ""
-
-#: woocommerce/single-product-reviews.php:104
-msgid "Very Poor"
-msgstr ""
-
-#: woocommerce/single-product-reviews.php:108
-msgid "Your Review"
-msgstr ""
-
-#: woocommerce/single-product-reviews.php:117
-msgid "Only logged in customers who have purchased this product may leave a review."
-msgstr ""
-
-#: woocommerce/wishlist-view.php:28
-msgid "Edit title"
-msgstr ""
-
-#: woocommerce/wishlist-view.php:86
-msgid "Product Name"
-msgstr ""
-
-#: woocommerce/wishlist-view.php:93
-msgid "Unit Price"
-msgstr ""
-
-#: woocommerce/wishlist-view.php:106
-msgid "Stock Status"
-msgstr ""
-
-#: woocommerce/wishlist-view.php:152 woocommerce/wishlist-view.php:255
-msgid "Remove this product"
-msgstr ""
-
-#: woocommerce/wishlist-view.php:182
-msgid "Free!"
-msgstr ""
-
-#: woocommerce/wishlist-view.php:193
-msgid "Out of Stock"
-msgstr ""
-
-#: woocommerce/wishlist-view.php:196
-msgid "In Stock"
-msgstr ""
-
-#: woocommerce/wishlist-view.php:223
-msgid "Move"
-msgstr ""
-
-#: woocommerce/wishlist-view.php:235
-msgid "Shared"
-msgstr ""
-
-#: woocommerce/wishlist-view.php:238
-msgid "Private"
-msgstr ""
-
-#: woocommerce/wishlist-view.php:241
-msgid "Public"
-msgstr ""
-
-#: woocommerce/wishlist-view.php:265
-msgid "No products were added to the wishlist"
-msgstr ""
-
-#: woocommerce/wishlist-view.php:282
-msgid "Add the selected products to the cart"
-msgstr ""
-
-#: woocommerce/wishlist-view.php:290 woocommerce/wishlist-view.php:330
-msgid "Ask for an estimate"
-msgstr ""
-
-#: woocommerce/woocommerce-theme-edits.php:608
-#: woocommerce/woocommerce-theme-edits.php:647
-msgid "Search for products"
-msgstr ""
-
-#. Theme Name of the plugin/theme
-msgid "Sequoia"
-msgstr ""
-
-#. Theme URI of the plugin/theme
-msgid "http://aligator-studio.com/sequoia"
-msgstr ""
-
-#. Description of the plugin/theme
-msgid ""
-"A semantic, HTML5, CSS3 theme for Wordpress. Main features: responsive, "
-"high-resolution (retina) ready, woocommerce compatible, aqua page builder "
-"compatible. Original Aligator Studio quality."
-msgstr ""
-
-#. Author of the plugin/theme
-msgid "Aligator Studio"
-msgstr ""
-
-#. Author URI of the plugin/theme
-msgid "http://themeforest.net/user/aligatorstudio"
-msgstr ""
-
-#. Template Name of the plugin/theme
-msgid "Blank template"
-msgstr ""
-
-#. Template Name of the plugin/theme
-msgid "Blank with footer widgets"
-msgstr ""
-
-#. Template Name of the plugin/theme
-msgid "Full width page"
-msgstr ""
-
-#. Template Name of the plugin/theme
-msgid "Page of posts - INFINITE load"
-msgstr ""
-
-#. Template Name of the plugin/theme
-msgid "Page of posts"
-msgstr ""
-
-#. Template Name of the plugin/theme
-msgid "Page builder template"
-msgstr ""
-
-#: archive.php:38
-msgctxt "monthly archives date format"
-msgid "F Y"
-msgstr ""
-
-#: archive.php:40
-msgctxt "yearly archives date format"
-msgid "Y"
-msgstr ""
-
-#: inc/Custom-Meta-Boxes/classes.fields.php:990
-msgctxt "select field"
-msgid "None"
-msgstr ""
-
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:1108
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2820
-msgctxt "plugin A *and* plugin B"
-msgid "and"
-msgstr ""
-
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:1873
-msgctxt "%s = version number"
-msgid "TGMPA v%s"
-msgstr ""
-
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2227
-msgctxt "%1$s = install status, %2$s = update status"
-msgid "%1$s, %2$s"
-msgstr ""
-
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2272
-msgctxt "plugins"
-msgid "All <span class=\"count\">(%s)</span>"
-msgid_plural "All <span class=\"count\">(%s)</span>"
-msgstr[0] ""
-msgstr[1] ""
-
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2363
-msgctxt "as in: \"version nr unknown\""
-msgid "unknown"
-msgstr ""
-
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2483
-msgctxt "%2$s = plugin name in screen reader markup"
-msgid "Install %2$s"
-msgstr ""
-
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2487
-msgctxt "%2$s = plugin name in screen reader markup"
-msgid "Update %2$s"
-msgstr ""
-
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2492
-msgctxt "%2$s = plugin name in screen reader markup"
-msgid "Activate %2$s"
-msgstr ""
-
-#: woocommerce/myaccount/my-orders.php:58
-msgctxt "hash before order number"
-msgid "#"
 msgstr ""

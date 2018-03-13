@@ -549,7 +549,7 @@ function quick_view () {
 		 */
 		// do_action( 'woocommerce_before_single_product_summary' ); // discarded
 		
-		do_action( 'product_quick_view_images' );
+		do_action( 'sequoia_quick_view_images' );
 	
 
 		echo '<div class="summary entry-summary">';

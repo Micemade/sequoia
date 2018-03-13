@@ -13,7 +13,7 @@
  * @see 	    https://docs.woocommerce.com/document/template-structure/
  * @author 		WooThemes
  * @package 	WooCommerce/Templates
- * @version     3.0.0
+ * @version     3.3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -22,18 +22,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $product;
 
-$class = $class . " wc-loop-button";
-
-// 3.0.0 < Fallback conditional :
-$product_id	= apply_filters( 'sequoia_wc_version', '3.0.0'  ) ? $product->get_id() : $product->id;
+$class = isset( $args['class'] ) ? $args['class'] . ' wc-loop-button' : ' wc-loop-button';
 
 echo apply_filters( 'woocommerce_loop_add_to_cart_link',
-	sprintf( '<div class="add-to-cart-holder"><a rel="nofollow" href="%s" data-quantity="%s" data-product_id="%s" data-product_sku="%s" class="tip-top %s" title="%s" data-tooltip><span class="icon-cart-2"></span></a></div>',
-		esc_url( $product->add_to_cart_url() ), // href
-		esc_attr( isset( $quantity ) ? $quantity : 1 ), // data-quantity
-		esc_attr( $product_id	 ), // data-product_id
-		esc_attr( $product->get_sku() ), // data-product_sku
-		esc_attr( isset( $class ) ? $class : '' ), // class
-		esc_html( $product->add_to_cart_text() ) // title
-	),
-$product );
+	sprintf( '<div class="add-to-cart-holder"><a href="%s" data-quantity="%s"  class="tip-top %s" title="%s" %s data-tooltip><span class="icon-cart-2"></span></a></div>',
+		esc_url( $product->add_to_cart_url() ),
+		esc_attr( isset( $args['quantity'] ) ? $args['quantity'] : 1 ),
+		esc_attr( $class ),
+		esc_html( $product->add_to_cart_text() ),
+		isset( $args['attributes'] ) ? wc_implode_html_attributes( $args['attributes'] ) : ''
+	), $product, $args );

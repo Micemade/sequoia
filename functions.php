@@ -11,28 +11,25 @@
  **/
 // Paths to admin functions :
 // if NOT CHILD THEME -use the paths and dir bellow:
-if( !is_child_theme() ) {
-	define('ADMIN_PATH', get_stylesheet_directory() . '/admin/');
-	define('ADMIN_DIR', get_template_directory_uri() . '/admin/');
-	define('LAYOUT_PATH', ADMIN_PATH . '/layouts/');
+if ( !is_child_theme() ) {
+	define( 'ADMIN_PATH', get_stylesheet_directory() . '/admin/' );
+	define( 'ADMIN_DIR', get_template_directory_uri() . '/admin/' );
+	define( 'LAYOUT_PATH', ADMIN_PATH . '/layouts/' );
 }
-//
-//
-//
+
 $theme_data	= wp_get_theme();
 $theme_slug	= sanitize_title( $theme_data );
-define('THEMENAME', $theme_data);
+define( 'THEMENAME', $theme_data );
 
 // Name of the database row in wp_options table where your options are stored
-define('OPTIONS', 'of_'.$theme_slug); 
+define( 'OPTIONS', 'of_'.$theme_slug ); 
 //
 // Build Options
-require_once ( ADMIN_PATH . 'admin-interface.php' );		// Admin Interfaces 
-require_once ( ADMIN_PATH . 'theme-options.php' ); 		// Options panel settings and custom settings
-require_once ( ADMIN_PATH . 'admin-functions.php' ); 	// Theme actions based on options settings
-/* end Options Framework */
-#
-#
+require_once ADMIN_PATH . 'admin-interface.php'; // Admin Interfaces.
+require_once ADMIN_PATH . 'theme-options.php'; // Options panel settings and custom.settings
+require_once ADMIN_PATH . 'admin-functions.php';// Theme actions based on options.settings
+// end Options Framework.
+
 /**
  * HTTP or HTTPS protocol
  */
@@ -47,120 +44,107 @@ if ( is_ssl() ) {
  *
  */
 if ( ! function_exists( 'sequoia_setup' ) ):
-function sequoia_setup() {
-	// MAX MEDIA WIDTH
-	if ( ! isset( $content_width ) ) $content_width = 1400;
-	// TRANSLATIONS:
-	load_theme_textdomain( 'sequoia', get_template_directory() . '/languages' );
-	// HTML TITLE META TAG:
-	add_theme_support( 'title-tag' );
-	// FEEDS:
-	add_theme_support( 'automatic-feed-links' );
-	// POST FORMATS:
-	add_theme_support( 'post-formats', array( 'audio', 'video', 'gallery','image', 'quote' ) );
-	//	POST THUMBNAIL SUPPORT:
-	add_theme_support( 'post-thumbnails', array( 'post', 'page', 'product', 'portfolio','slide' ) );
-	//
-	// MENUS:
-	add_theme_support( 'menus' );
-	register_nav_menu( 'main-horizontal', 'Main horizontal menu' );
-	register_nav_menu( 'main-vertical', 'Main vertical menu' );
-	register_nav_menu( 'main-mobile', 'Main mobile menu' );
-	register_nav_menu( 'secondary', 'Secondary menu' );
-	//
-	//
-	/*************** IMAGES ******************/
-	//
-	// IMAGE RESIZING SCRIPT
-	if( ! function_exists( 'bfi_thumb' ) ) {
-		require_once( trailingslashit( get_template_directory() ) . 'inc/functions/BFI_Thumb.php');	
+	function sequoia_setup() {
+		// MAX MEDIA WIDTH.
+		if ( ! isset( $content_width ) ) $content_width = 1400;
+		// TRANSLATIONS.
+		load_theme_textdomain( 'sequoia', get_template_directory() . '/languages' );
+		// HTML TITLE META TAG.
+		add_theme_support( 'title-tag' );
+		// FEEDS.
+		add_theme_support( 'automatic-feed-links' );
+		// POST FORMATS.
+		add_theme_support( 'post-formats', array( 'audio', 'video', 'gallery','image', 'quote' ) );
+		//	POST THUMBNAIL SUPPORT.
+		add_theme_support( 'post-thumbnails', array( 'post', 'page', 'product', 'portfolio','slide' ) );
+		// Add support for WooCommerce.
+		add_theme_support( 'woocommerce' );
+		// MENUS.
+		add_theme_support( 'menus' );
+		register_nav_menu( 'main-horizontal', 'Main horizontal menu' );
+		register_nav_menu( 'main-vertical', 'Main vertical menu' );
+		register_nav_menu( 'main-mobile', 'Main mobile menu' );
+		register_nav_menu( 'secondary', 'Secondary menu' );
+		// IMAGE RESIZING SCRIPT.
+		if( ! function_exists( 'bfi_thumb' ) ) {
+			require_once( trailingslashit( get_template_directory() ) . 'inc/functions/BFI_Thumb.php');	
+		}
+		// IMAGE SIZES (AS = Aligator Studio).
+		// - custom portrait and landscape formats.
+		add_image_size( 'as-portrait', 500, 700, true );
+		add_image_size( 'as-landscape', 1200 ,680, true );
+		add_filter( 'image_size_names_choose', 'as_image_sizes_mediapopup', 11, 1 );
+		// ENABLE SHORTCODES ON REGULAR TEXT WIDGET.
+		add_filter( 'widget_text', 'do_shortcode' ); // te enable shortcodes in widgets
+		//
+		add_editor_style();
+		//
+		//
+		// THEME WIDGETS
+		include( trailingslashit( get_template_directory() ) . 'inc/widgets/widget_latest_images.php' );
+		include( trailingslashit( get_template_directory() ) . 'inc/widgets/widget_featured_images.php' );
+		include( trailingslashit( get_template_directory() ) . 'inc/widgets/widget_social.php' );
+		include( trailingslashit( get_template_directory() ) . 'inc/widgets/latest-custom-posts.php' );
+		//
+		//
+		// CUSTOM META BOXES
+		require_once( trailingslashit( get_template_directory() ) . 'inc/Custom-Meta-Boxes/custom-meta-boxes.php' );
+		require_once( trailingslashit( get_template_directory() ) . 'inc/functions/as-meta-boxes.php' );
+		//
+		//
+		add_filter( 'wp_calculate_image_srcset_meta', '__return_null' );
 	}
-	//
-	// IMAGE SIZES (AS = Aligator Studio)
-	// - custom portrait and landscape formats
-	//
-	add_image_size( 'as-portrait', 500, 700, true );
-	add_image_size( 'as-landscape', 1200 ,680, true );
-	//
-	add_filter( 'image_size_names_choose', 'as_image_sizes_mediapopup', 11, 1 );
-	//
-	/************ end IMAGES  ***************/
-	//
-	// ENABLE SHORTCODES ON REGULAR TEXT WIDGET
-	add_filter( 'widget_text', 'do_shortcode' ); // te enable shortcodes in widgets
-	//
-	add_editor_style();
-	//
-	//
-	// THEME WIDGETS
-	include( trailingslashit( get_template_directory() ) . 'inc/widgets/widget_latest_images.php' );
-	include( trailingslashit( get_template_directory() ) . 'inc/widgets/widget_featured_images.php' );
-	include( trailingslashit( get_template_directory() ) . 'inc/widgets/widget_social.php' );
-	include( trailingslashit( get_template_directory() ) . 'inc/widgets/latest-custom-posts.php' );
-	//
-	//
-	// CUSTOM META BOXES
-	require_once( trailingslashit( get_template_directory() ) . 'inc/Custom-Meta-Boxes/custom-meta-boxes.php' );
-	require_once( trailingslashit( get_template_directory() ) . 'inc/functions/as-meta-boxes.php' );
-	//
-	//
-	add_filter( 'wp_calculate_image_srcset_meta', '__return_null' );
-}
-endif;// sequoia_setup
+endif;
 add_action( 'after_setup_theme', 'sequoia_setup' );
-//
-//
-//
-global $of_sequoia;
 /**
- *  SEQUOIA OPTIONS 
- *  
- *  @param [in] $setting - setting ID to fetch from options
- *  @param [in] $default - default (fallback) value for setting
- *  @return settion option calue
- *  
+ * SEQUOIA OPTIONS 
+ *
+ * @param [in] $setting - setting ID to fetch from options
+ * @param [in] $default - default (fallback) value for setting
+ * @return settion option calue
+ *
  */
 function sequoia_options_func( $setting, $default ) {
 	global $of_sequoia;
-	
+
 	if ( is_ssl() ) {
 		$of_sequoia =  str_replace( "http://", "https://", $of_sequoia );
 	}
-		
-	$single_setting = isset( $of_sequoia[$setting] ) ? $of_sequoia[$setting] : '';
 
-	if( $single_setting && !empty( $single_setting ) ) {
+	$single_setting = isset( $of_sequoia[ $setting ] ) ? $of_sequoia[ $setting ] : '';
+
+	if ( $single_setting && !empty( $single_setting ) ) {
 		$option = $single_setting;
-	}else{
+	} else {
 		$option = $default;
 	}
-	
+
 	return $option;
 }
-add_filter( "sequoia_options", "sequoia_options_func", 10,2 );
+add_filter( 'sequoia_options', 'sequoia_options_func', 10, 2 );
 /**
- *	WP Filesystem wrapper class: 
+ * WP Filesystem wrapper class.
  */
 include_once( trailingslashit( get_template_directory() ) . 'inc/functions/wp-filesystem.php' );
 //
 /**
- * MENU FUNCTIONS:
+ * MENU FUNCTIONS.
  */
 include( trailingslashit( get_template_directory() ) . 'inc/functions/menus.php' );
 include( trailingslashit( get_template_directory() ) . 'inc/functions/menus-expand.php' );
 //
 /**
- *	WIDGETS FUNCTIONS:
+ *	WIDGETS FUNCTIONS.
  */
 include( trailingslashit( get_template_directory() ) . 'inc/functions/widgets.php' );
 //
 /**
- *	BREADCRUMBS:
+ *	BREADCRUMBS.
  */
 include( trailingslashit( get_template_directory() ) . 'inc/functions/breadcrumbs.php' );
 //
 /**
- *	PAGINATION:
+ *	PAGINATION.
  */
 include( trailingslashit( get_template_directory() ) . 'inc/functions/pagination.php' );
 //

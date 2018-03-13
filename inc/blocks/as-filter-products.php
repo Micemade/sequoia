@@ -27,7 +27,7 @@ class AS_Filter_Products extends AQ_Block {
 	
 	function form($instance) {
 		
-		$sequoia_wc_active = apply_filters( "sequoia_wc_active","");
+		$sequoia_wc_active = apply_filters( 'sequoia_wc_active',"");
 		
 		$defaults = array(
 			'title'				=> '',
@@ -337,7 +337,7 @@ class AS_Filter_Products extends AQ_Block {
 		
 		global $post, $product, $woocommerce_loop, $wp_query, $woocommerce;
 	
-		$sequoia_wc_active = apply_filters( "sequoia_wc_active","");
+		$sequoia_wc_active = apply_filters( 'sequoia_wc_active',"");
 		
 		extract($instance);
 		
