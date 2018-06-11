@@ -15,20 +15,17 @@ if ( is_admin() && isset($_GET['activated'] ) && $pagenow == "themes.php" ) {
 
 /* set options=defaults if DB entry does not exist, else update defaults only */
 function of_option_setup()	{
-	
+
 	global $of_options, $options_machine;
-	
-	$options_machine = new Options_Machine($of_options);
-		
-	if (!get_option(OPTIONS)){
-		
+
+	$options_machine = new Options_Machine( $of_options );
+
+	if ( ! get_option( OPTIONS ) ) {
 		$defaults = (array) $options_machine->Defaults;
-		update_option(OPTIONS,$defaults);
-		generate_options_css($defaults); 
-		
+		update_option( OPTIONS, $defaults );
+		generate_options_css( $defaults );
+
 	}
-	
-	
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -38,24 +35,22 @@ function optionsframework_admin_message() {
 	
 	//Tweaked the message on theme activate
 	?>
-    <script type="text/javascript">
-    jQuery(function(){
-    	
-        var message = '<p>This theme comes with an <a href="<?php echo admin_url('admin.php?page=optionsframework'); ?>">options panel</a> to configure settings. This theme also supports widgets, please visit the <a href="<?php echo admin_url('widgets.php'); ?>">widgets settings page</a> to configure them.</p>';
-    	jQuery('.themes-php #message2').html(message);
-    
-    });
-    </script>
-    <?php
+	<script type="text/javascript">
+	jQuery(function(){
+		
+		var message = '<p>This theme comes with an <a href="<?php echo admin_url('admin.php?page=optionsframework'); ?>">options panel</a> to configure settings. This theme also supports widgets, please visit the <a href="<?php echo admin_url('widgets.php'); ?>">widgets settings page</a> to configure them.</p>';
+		jQuery('.themes-php #message2').html(message);
 	
+	});
+	</script>
+	<?php
 }
-
-add_action('admin_head', 'optionsframework_admin_message'); 
+add_action('admin_head', 'optionsframework_admin_message');
 
 /*-----------------------------------------------------------------------------------*/
 /* Generate css from options */
 /*-----------------------------------------------------------------------------------*/
-function generate_options_css($newdata) { 
+function generate_options_css( $newdata ) { 
 
 	global $of_sequoia;
 	

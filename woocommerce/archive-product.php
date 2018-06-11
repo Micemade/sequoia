@@ -10,10 +10,10 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see 	    https://docs.woocommerce.com/document/template-structure/
- * @author 		WooThemes
- * @package 	WooCommerce/Templates
- * @version     3.3.0
+ * @see         https://docs.woocommerce.com/document/template-structure/
+ * @author      WooThemes
+ * @package     WooCommerce/Templates
+ * @version     3.4.0
  */
 
 // Exit if accessed directly
@@ -37,9 +37,8 @@ $products_full_width = apply_filters( 'sequoia_options', 'products_full_width', 
 	 *
 	 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
 	 * @hooked woocommerce_breadcrumb - 20
-	
-	do_action('woocommerce_before_main_content'); // COPIED TO "breadcrumbs.php" file in theme root
-	*/ 
+	 * do_action('woocommerce_before_main_content'); // COPIED TO "breadcrumbs.php" file in theme root
+	*/
 ?>
 
 <?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
@@ -53,19 +52,19 @@ $products_full_width = apply_filters( 'sequoia_options', 'products_full_width', 
 
 		if ( is_tax( 'product_cat' ) ){
 			// $term - current taxonomy term id
-			$term = get_term_by('slug', esc_attr( get_query_var('product_cat') ), 'product_cat');
+			$term = get_term_by( 'slug', esc_attr( get_query_var( 'product_cat' ) ), 'product_cat' );
 			// WooCommerce meta - thumbnail_id:
 			$thumbnail_id = get_woocommerce_term_meta( $term->term_id, 'thumbnail_id' );
 		} else {
 			$thumbnail_id = '';
 		}
 
-		if( $thumbnail_id ) {
+		if ( $thumbnail_id ) {
 			// get image by attachment id:
 			$image = wp_get_attachment_image_src( $thumbnail_id, 'as-landscape' );
 			$image = $image[0];
 		} else {
-			$image =  $shop_title_backimg;
+			$image = $shop_title_backimg;
 		}
 
 		echo'<div class="header-background' . ( UNDERHEAD_IMAGE ? ' under-head' : '' ) . '" style="background-image: url(' . esc_url( $image ) . ');"></div>';
@@ -103,7 +102,11 @@ $products_full_width = apply_filters( 'sequoia_options', 'products_full_width', 
 
 		<div class="clearfix"></div>
 
-		<?php if ( have_posts() ) { ?>
+		<?php
+		// WC 3.4.0+ using if ( woocommerce_product_loop() ) instead of if ( have_posts() )
+		// hook in wc-theme-edits/frontend-filters-hooks.php
+		if ( apply_filters( 'sequoia_wc340_archive_loop' ,'' ) ) {
+		?>
 
 			<?php do_action( 'sequoia_top_catalog_widgets' ); ?>
 

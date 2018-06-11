@@ -278,15 +278,30 @@ if ( apply_filters( 'sequoia_wc_active', '' ) ) {
 	 */
 	function as_remove_first_last( $classes ) {
 
-		if ( is_woocommerce() || is_active_widget( false,false,'woocommerce_products' ) ) {
+		if ( is_woocommerce() || is_active_widget( false, false, 'woocommerce_products' ) ) {
 			$classes = array_diff( $classes, array('first') );	
 			$classes = array_diff( $classes, array('last') );
 		}
 
 		return $classes;
 	}
-	add_filter( 'post_class','as_remove_first_last', 100 );
+	add_filter( 'post_class', 'as_remove_first_last', 100 );
 
 
 // end if $sequoia_woo_is_active.
 }
+/**
+ * WooCommerce 3.4.+ product archive loop
+ *
+ * @return void
+ */
+function sequoia_wc340_archive_loop_f() {
+	global $post;
+	if ( apply_filters( 'sequoia_wc_version', '3.4.0' ) && function_exists( 'woocommerce_product_loop' ) ) {
+		$wc_product_loop = woocommerce_product_loop();
+	} else {
+		$wc_product_loop = have_posts();
+	}
+	return $wc_product_loop;
+}
+add_filter( 'sequoia_wc340_archive_loop', 'sequoia_wc340_archive_loop_f' );

@@ -6,9 +6,9 @@
  * @since sequoia1.0
  **/
 get_header(); 
-?>	
+?>
 
-					
+
 <header class="page-header">
 	
 	<?php	

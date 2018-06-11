@@ -10,64 +10,62 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see 	https://docs.woocommerce.com/document/template-structure/
+ * @see     https://docs.woocommerce.com/document/template-structure/
  * @author  WooThemes
  * @package WooCommerce/Templates
- * @version 3.0.0
+ * @version 3.4.1
  */
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
 global $product;
 // 3.0.0 < Fallback conditional :
-$product_id	= apply_filters( 'sequoia_wc_version', '3.0.0'  ) ? $product->get_id() : $product->id;
-?>
-
-<?php
+$product_id = apply_filters( 'sequoia_wc_version', '3.0.0' ) ? $product->get_id() : $product->id;
 
 /**
- *	REPLACE SHOP SINGLE SIZE VALUES WITH THEME REGISTERED SIZE VALUES
+ * REPLACE SHOP SINGLE SIZE VALUES WITH THEME REGISTERED SIZE VALUES
  *
  */
 
 $img_sizes = all_image_sizes();
-$of_imgformat = apply_filters( 'sequoia_options', 'single_product_image_format',  'as-portrait' );
-if( $of_imgformat !== 'plugin' ){
-	
-	$img_width	= $img_sizes[$of_imgformat]['width'];
-	$img_height = $img_sizes[$of_imgformat]['height'];
+$of_imgformat = apply_filters( 'sequoia_options', 'single_product_image_format', 'as-portrait' );
+if ( 'plugin' !== $of_imgformat ) {
+
+	$img_width  = $img_sizes[ $of_imgformat ]['width'];
+	$img_height = $img_sizes[ $of_imgformat ]['height'];
 
 	$shop_single_w = $img_sizes['shop_single']['width'];
 	$shop_single_h = $img_sizes['shop_single']['height'];
-	
-	
-	$to_replace = $shop_single_w.'x'.$shop_single_h;
-	$replace_size = $img_width .'x'. $img_height;
 
-	if( $available_variations != false ) {
-		foreach($available_variations as $var ){
-			
-			if( apply_filters( 'sequoia_wc_version', '3.0.0' ) ) {
-				$img_src = str_replace( $to_replace, $replace_size , $var['image']['src'] );
-				$var['image']['src'] = $img_src;
+	$to_replace   = $shop_single_w . 'x' . $shop_single_h;
+	$replace_size = $img_width . 'x' . $img_height;
+
+	if ( false !== $available_variations ) {
+		foreach ( $available_variations as $var ) {
+
+			if ( apply_filters( 'sequoia_wc_version', '3.0.0' ) ) {
+				$img_src              = str_replace( $to_replace, $replace_size, $var['image']['src'] );
+				$var['image']['src']  = $img_src;
 				$variations_changed[] = $var;
-			}else{
-				$img_src = str_replace( $to_replace, $replace_size , $var['image_src'] );
-				$replacements = array ( 'image_src' => $img_src );
+			} else {
+				$img_src      = str_replace( $to_replace, $replace_size, $var['image_src'] );
+				$replacements = array (
+					'image_src' => $img_src,
+				);
 				$variations_changed[] = array_replace( $var, $replacements );
 			}
-			
 		}
-		$available_variations = $variations_changed;		
+		$available_variations = $variations_changed;
 	}
-
 }
 $attribute_keys = array_keys( $attributes );
 
-do_action( 'woocommerce_before_add_to_cart_form' ); ?>
+do_action( 'woocommerce_before_add_to_cart_form' );
+?>
 
-<form class="variations_form cart" method="post" enctype='multipart/form-data' data-product_id="<?php echo absint( $product_id ); ?>" data-product_variations="<?php echo htmlspecialchars( json_encode( $available_variations ) ) ?>">
+<form class="variations_form cart" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data' data-product_id="<?php echo absint( $product_id ); ?>" data-product_variations="<?php echo htmlspecialchars( json_encode( $available_variations ) ) ?>">
 	<?php do_action( 'woocommerce_before_variations_form' ); ?>
 
 	<?php if ( empty( $available_variations ) && false !== $available_variations ) : ?>
@@ -77,16 +75,19 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 			<tbody>
 				<?php foreach ( $attributes as $attribute_name => $options ) : ?>
 					<tr>
-						<td class="label"><label for="<?php echo sanitize_title( $attribute_name ); ?>"><?php echo wc_attribute_label( $attribute_name ); ?></label></td>
+						<td class="label"><label for="<?php echo esc_attr( sanitize_title( $attribute_name ) ); ?>"><?php echo wc_attribute_label( $attribute_name ); // WPCS: XSS ok. ?></label></td>
 						<td class="value">
 							<?php
-								$selected = isset( $_REQUEST[ 'attribute_' . sanitize_title( $attribute_name ) ] ) ? wc_clean( $_REQUEST[ 'attribute_' . sanitize_title( $attribute_name ) ] ) : $product->get_variation_default_attribute( $attribute_name );
-								wc_dropdown_variation_attribute_options( array( 'options' => $options, 'attribute' => $attribute_name, 'product' => $product, 'selected' => $selected ) );
-								echo end( $attribute_keys ) === $attribute_name ? apply_filters( 'woocommerce_reset_variations_link', '<a class="reset_variations" href="#">' . __( 'Clear', 'sequoia' ) . '</a>' ) : '';
+								wc_dropdown_variation_attribute_options( array(
+									'options'   => $options,
+									'attribute' => $attribute_name,
+									'product'   => $product,
+								) );
+								echo end( $attribute_keys ) === $attribute_name ? wp_kses_post( apply_filters( 'woocommerce_reset_variations_link', '<a class="reset_variations" href="#">' . esc_html__( 'Clear', 'sequoia' ) . '</a>' ) ) : '';
 							?>
 						</td>
 					</tr>
-		        <?php endforeach;?>
+				<?php endforeach; ?>
 			</tbody>
 		</table>
 

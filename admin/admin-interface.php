@@ -18,9 +18,8 @@ function optionsframework_admin_init() {
 		global $of_options, $options_machine;
 		$options_machine = new Options_Machine($of_options);
 		
-		
-	    //if reset is pressed->replace options with defaults
-    if ( isset($_REQUEST['page']) && $_REQUEST['page'] == 'optionsframework' ) {
+		//if reset is pressed->replace options with defaults
+	if ( isset($_REQUEST['page']) && $_REQUEST['page'] == 'optionsframework' ) {
 		if (isset($_REQUEST['of_reset']) && 'reset' == $_REQUEST['of_reset']) {
 			
 			$nonce=$_POST['security'];
@@ -40,7 +39,7 @@ function optionsframework_admin_init() {
 				die($options_machine->Defaults);
 			} 
 		}
-    }
+	}
 }
 add_action('admin_init','optionsframework_admin_init');
 
@@ -50,7 +49,7 @@ add_action('admin_init','optionsframework_admin_init');
 
 function optionsframework_add_admin() {
 	
-    $of_page = add_theme_page(THEMENAME, 'Theme Options', 'edit_theme_options', 'optionsframework','optionsframework_options_page'); // Default
+	$of_page = add_theme_page(THEMENAME, 'Theme Options', 'edit_theme_options', 'optionsframework','optionsframework_options_page'); // Default
 
 	// Add framework functionaily to the head individually
 	add_action("admin_print_scripts-$of_page", 'of_load_only');
@@ -75,48 +74,51 @@ global $options_machine;
 
 <div class="wrap" id="of_container">
   <div id="of-popup-save" class="of-save-popup">
-    <div class="of-save-save">Options Updated</div>
+	<div class="of-save-save">Options Updated</div>
   </div>
   <div id="of-popup-reset" class="of-save-popup">
-    <div class="of-save-reset">Options Reset</div>
+	<div class="of-save-reset">Options Reset</div>
   </div>
    <div id="of-popup-fail" class="of-save-popup">
-    <div class="of-save-fail">Error!</div>
+	<div class="of-save-fail">Error!</div>
   </div>
 
   <form id="of_form" method="post" action="<?php echo esc_attr( $_SERVER['REQUEST_URI'] ) ?>" enctype="multipart/form-data" >
-    <div id="header">
-      <div class="logo">
-        <h2><strong><?php bloginfo( 'name' ); ?></strong> <small>Options</small></h2>
-      </div>
+	<div id="header">
+	  <div class="logo">
+		<h2><strong><?php bloginfo( 'name' ); ?></strong> <small>Options</small></h2>
+	  </div>
 	  <div id="js-warning">Warning- This options panel will not work properly without javascript!</div>
-      <div class="icon-option"> </div>
-      <div class="clear"></div>
-    </div>
+	  <div class="icon-option"> </div>
+	  <div class="clear"></div>
+	</div>
 
 	<div id="info_bar"> 
 	<a><div id="expand_options" class="expand">Expand</div></a>
 	
 	<a href="http://themeforest.net/user/aligatorstudio" target="_blank" class="as-links">Contact Us</a> | <a href="<?php echo get_template_directory_uri() ?>/documentation" target="_blank" class="as-links">Documentation</a>
 	
-    <img style="display:none" src="<?php echo esc_url(ADMIN_DIR); ?>images/loading-bottom.gif" class="ajax-loading-img ajax-loading-img-bottom" alt="Working..." />
-    <input type="hidden" id="security" name="security" value="<?php echo wp_create_nonce('of_ajax_nonce'); ?>" />	
+	<img style="display:none" src="<?php echo esc_url(ADMIN_DIR); ?>images/loading-bottom.gif" class="ajax-loading-img ajax-loading-img-bottom" alt="Working..." />
+	<input type="hidden" id="security" name="security" value="<?php echo wp_create_nonce('of_ajax_nonce'); ?>" />	
 	<button id ="of_save" type="button" class="button-primary"><?php _e('Save All Changes','sequoia');?></button>
-	</div><!--.info_bar--> 	
-	
-    <div id="main">
-      <div id="of-nav">
-        <ul>
-          <?php echo wp_kses_decode_entities($options_machine->Menu) ?>
-        </ul>
-      </div>
-      <div id="content"> <?php echo wp_kses_decode_entities($options_machine->Inputs) /* Settings */ ?> </div>
-      <div class="clear"></div>
-    </div>
+	</div><!--.info_bar--> 
+
+	<div id="main">
+		
+		<div id="of-nav">
+			<ul>
+				<?php echo wp_kses_decode_entities( $options_machine->Menu ); ?>
+			</ul>
+		</div>
+
+		<div id="content">
+			<?php echo wp_kses_decode_entities( $options_machine->Inputs ); ?> </div>
+			<div class="clear"></div>
+		</div>
 	
 	<div class="save_bar"> 
-    <img style="display:none" src="<?php echo ADMIN_DIR; ?>images/loading-bottom.gif" class="ajax-loading-img ajax-loading-img-bottom" alt="Working..." />
-    <input type="hidden" id="security" name="security" value="<?php echo wp_create_nonce('of_ajax_nonce'); ?>" />
+	<img style="display:none" src="<?php echo ADMIN_DIR; ?>images/loading-bottom.gif" class="ajax-loading-img ajax-loading-img-bottom" alt="Working..." />
+	<input type="hidden" id="security" name="security" value="<?php echo wp_create_nonce('of_ajax_nonce'); ?>" />
 	<input type="hidden" name="of_reset" value="reset" />
 	
 	<button id ="of_save" type="submit" class="button-primary"><?php esc_html_e('Save All Changes','sequoia');?></button>
@@ -181,8 +183,8 @@ function of_admin_head() {
 	
 	//(un)fold options in a checkbox-group
   	jQuery('.fld').click(function() {
-    	var $fold='.f_'+this.id;
-    	$($fold).slideToggle('normal', "swing");
+		var $fold='.f_'+this.id;
+		$($fold).slideToggle('normal', "swing");
   	});
 	
 	//hide hidden section on page load.
@@ -283,7 +285,7 @@ function of_admin_head() {
 	}
 		message_popup.fadeIn();
 		window.setTimeout(function(){
-	    message_popup.fadeOut();                        
+		message_popup.fadeOut();						
 		}, 2000);	
 	}
 	
@@ -383,7 +385,7 @@ function of_admin_head() {
 				var fail_popup = $('#of-popup-fail');
 				fail_popup.fadeIn();
 				window.setTimeout(function(){
-				fail_popup.fadeOut();                        
+				fail_popup.fadeOut();						
 				}, 2000);
 			}				
 					
@@ -437,7 +439,7 @@ function of_admin_head() {
 				var fail_popup = $('#of-popup-fail');
 				fail_popup.fadeIn();
 				window.setTimeout(function(){
-					fail_popup.fadeOut();                        
+					fail_popup.fadeOut();						
 				}, 2000);
 			}
 						
@@ -731,7 +733,7 @@ function of_admin_head() {
 						$(this).val( this_id + '|' + percentage );
 					}
 				);
-									
+
 			}
 		});
 	});
@@ -742,7 +744,7 @@ function of_admin_head() {
 	//backup button
 	$('#of_backup_button').live('click', function(){
 	
-		var answer = confirm("<?php _e('Click OK to backup your current saved options.','sequoia');?>")
+		var answer = confirm("<?php _e( 'Click OK to backup your current saved options.', 'sequoia' ); ?>");
 		
 		if (answer){
 	
@@ -765,7 +767,7 @@ function of_admin_head() {
 					var fail_popup = $('#of-popup-fail');
 					fail_popup.fadeIn();
 					window.setTimeout(function(){
-						fail_popup.fadeOut();                        
+						fail_popup.fadeOut();
 					}, 2000);
 				}
 							
@@ -774,16 +776,16 @@ function of_admin_head() {
 					var success_popup = $('#of-popup-save');
 					success_popup.fadeIn();
 					window.setTimeout(function(){
-						location.reload();                        
+						location.reload();
 					}, 1000);
 				}
-							
+
 			});
 			
 		}
 		
 	return false;
-					
+
 	}); 
 	
 	//restore button
@@ -812,7 +814,7 @@ function of_admin_head() {
 					var fail_popup = $('#of-popup-fail');
 					fail_popup.fadeIn();
 					window.setTimeout(function(){
-						fail_popup.fadeOut();                        
+						fail_popup.fadeOut();
 					}, 2000);
 				}
 							
@@ -821,16 +823,16 @@ function of_admin_head() {
 					var success_popup = $('#of-popup-save');
 					success_popup.fadeIn();
 					window.setTimeout(function(){
-						location.reload();                        
+						location.reload();
 					}, 1000);
 				}	
-						
+
 			});
 	
 		}
 	
 	return false;
-					
+
 	});
 	
 	/**	Ajax Transfer (Import/Export) Option */
@@ -862,17 +864,17 @@ function of_admin_head() {
 				if(response==-1){ //failed
 					fail_popup.fadeIn();
 					window.setTimeout(function(){
-						fail_popup.fadeOut();                        
+						fail_popup.fadeOut();
 					}, 2000);
 				}		
 				else 
 				{
 					success_popup.fadeIn();
 					window.setTimeout(function(){
-						location.reload();                        
+						location.reload();
 					}, 1000);
 				}
-							
+
 			});
 			
 		}
@@ -887,13 +889,11 @@ function of_admin_head() {
 	$('#of_save, input.nag_input').live('click',function() {
 			
 		var nonce = $('#security').val();
-					
+
 		$('.ajax-loading-img').fadeIn();
-										
+
 		var serializedReturn = $('#of_form :input[name][name!="security"][name!="of_reset"]').serialize();
-										
-		//alert(serializedReturn);
-						
+
 		var data = {
 			<?php if(isset($_REQUEST['page']) && $_REQUEST['page'] == 'optionsframework'){ ?>
 			type: 'save',
@@ -1192,7 +1192,7 @@ function of_admin_head() {
 		// Finally, open the modal.
 		frame.open();
 	}
-    
+	
 	function optionsframework_remove_file(selector) {
 		selector.find('.remove-image').hide().addClass('hide');//hide "Remove" button
 		selector.find('.upload').val('');
@@ -1210,14 +1210,14 @@ function of_admin_head() {
 	function optionsframework_file_bindings() {
 		$('.remove-image, .remove-file').on('click', function() {
 			optionsframework_remove_file( $(this).parents('.section-upload, .section-media, .slide_body') );
-        });
-        
-        $('.media_upload_button').unbind('click').click( function( event ) {
-        	optionsframework_add_file(event, $(this).parents('.section-upload, .section-media, .slide_body'));
-        });
-    }
-    
-    optionsframework_file_bindings();	
+		});
+		
+		$('.media_upload_button').unbind('click').click( function( event ) {
+			optionsframework_add_file(event, $(this).parents('.section-upload, .section-media, .slide_body'));
+		});
+	}
+	
+	optionsframework_file_bindings();	
 	
 }); //end doc ready
 </script>
@@ -1247,10 +1247,10 @@ function of_ajax_callback() {
 		
 		$clickedID = $_POST['data']; // Acts as the name
 		$filename = $_FILES[$clickedID];
-       	$filename['name'] = preg_replace('/[^a-zA-Z0-9._\-]/', '', $filename['name']); 
+	   	$filename['name'] = preg_replace('/[^a-zA-Z0-9._\-]/', '', $filename['name']); 
 		
 		$override['test_form'] = false;
-		$override['action'] = 'wp_handle_upload';    
+		$override['action'] = 'wp_handle_upload';	
 		$uploaded_file = wp_handle_upload($filename,$override);
 		 
 			$upload_tracking[] = $clickedID;
@@ -1316,11 +1316,11 @@ function of_ajax_callback() {
 	} elseif ($save_type == 'reset') {
 		update_option(OPTIONS,$options_machine->Defaults);
 		
-        die(1); //options reset
-        
+		die(1); //options reset
+		
 	}
 
-  die();
+	die();
 
 }
 
@@ -1331,9 +1331,9 @@ function of_ajax_callback() {
 
 class Options_Machine {
 
-	function __construct($options) {
+	function __construct( $options ) {
 		
-		$return = $this->optionsframework_machine($options);
+		$return = $this->optionsframework_machine( $options );
 		
 		$this->Inputs = $return[0];
 		$this->Menu = $return[1];
@@ -1347,19 +1347,19 @@ class Options_Machine {
 	 * Sanitize & returns default values if don't exist
 	 * 
 	 * Notes:
-	 	- For further uses, you can check for the $value['type'] and performs
-	 	  more speficic sanitization on the option
-	 	- The ultimate objective of this function is to prevent the "undefined index"
-	 	  errors some authors are having due to malformed options array
+	 * For further uses, you can check for the $value['type'] and performs
+	 * more speficic sanitization on the option
+	 * The ultimate objective of this function is to prevent the "undefined index"
+	 * errors some authors are having due to malformed options array
 	 */
 	static function sanitize_option( $value ) {
 		$defaults = array(
-			"name" 		=> "",
-			"desc" 		=> "",
-			"id" 		=> "",
-			"std" 		=> "",
-			"mod"		=> "",
-			"type" 		=> ""
+			"name" => '',
+			"desc" => '',
+			"id"   => '',
+			"std"  => '',
+			"mod"  => '',
+			"type" => '',
 		);
 
 		$value = wp_parse_args( $value, $defaults );
@@ -1372,36 +1372,37 @@ class Options_Machine {
 	/* Generates The Options Within the Panel - optionsframework_machine */
 	/*-----------------------------------------------------------------------------------*/
 
-	public static function optionsframework_machine($options) {
+	public static function optionsframework_machine( $options ) {
 
 		global $smof_details;
 		
-		$of_sequoia = get_option(OPTIONS);
+		$of_sequoia = get_option( OPTIONS );
 		
-		$defaults = array();   
-		$counter = 0;
-		$menu = '';
-		$output = '';
-		foreach ($options as $value) {
-		   
+		$defaults = array();
+		$counter  = 0;
+		$menu     = '';
+		$output   = '';
+		
+		foreach ( $options as $value ) {
+		
 			$counter++;
 			$val = '';
 			
 			// sanitize option
-			if ($value['type'] != "heading")
+			if ( $value['type'] != "heading" )
 				$value = self::sanitize_option($value);
 			
 			//create array of defaults		
-			if ($value['type'] == 'multicheck'){
-				if (is_array($value['std'])){
-					foreach($value['std'] as $i=>$key){
-						$defaults[$value['id']][$key] = true;
+			if ( $value['type'] == 'multicheck' ){
+				if ( is_array( $value['std'] ) ){
+					foreach ( $value['std'] as $i=>$key ){
+						$defaults[ $value['id'] ][ $key ] = true;
 					}
 				} else {
-						$defaults[$value['id']][$value['std']] = true;
+						$defaults[ $value['id'] ][ $value['std'] ] = true;
 				}
 			} else {
-				if (isset($value['id']) && isset($value['std'])) {
+				if ( isset( $value['id'] ) && isset( $value['std'] ) ) {
 					$defaults[$value['id']] = $value['std'];
 				}
 			}
@@ -1423,8 +1424,7 @@ class Options_Machine {
 			
 			
 			//Start Heading of each option ///////////////////////
-			 if ( $value['type'] != "heading" )
-			 {
+			if ( $value['type'] != "heading" ) {
 				$class = ''; if(isset( $value['class'] )) { $class = $value['class']; }
 				
 				//hide items in checkbox group
@@ -1443,10 +1443,10 @@ class Options_Machine {
 				if($value['name']) $output .= '<h3 class="heading">'. $value['name'] .'</h3>'."\n";
 				$output .= '<div class="option">'."\n" . '<div class="controls">'."\n";
 
-			 } 
-			 //End Heading ///////////////////////
-			 
-											 
+			}
+			//End Heading ///////////////////////
+
+
 			switch ( $value['type'] ) {
 			////////////////////////////////////////
 			case 'text':
@@ -1991,16 +1991,16 @@ class Options_Machine {
 						$output .= '<span class="glyph '. $select_css .'">';
 						$output .= '<input type="radio" id="'. $value['id'] .'_decoration_'.$i.'" class="checkbox of-radio-img-radio" value="'.$key.'" name="'. $value['id'].'[decoration] " '. $checked .' />';
 						
-						$output .= '<span class="'.$option.' of-radio-icon"    onClick="document.getElementById(\''. $value['id'] .'_decoration_'.$i.'\').checked = true;"></span>';
-						$output .= '</span>';				
+						$output .= '<span class="'.$option.' of-radio-icon"	onClick="document.getElementById(\''. $value['id'] .'_decoration_'.$i.'\').checked = true;"></span>';
+						$output .= '</span>';
 					}
 					$output .= '</div>';
 				
 				}
-								
 				
-			break;  
-			////////////////////////////////////////
+			break;
+			
+			// Images
 			case 'images':
 			
 				$i = 0;
@@ -2024,15 +2024,16 @@ class Options_Machine {
 					$output .= '</span>';				
 				}
 				
-			break;	
-			////////////////////////////////////////
+			break;
+			
+			// Info
 			case "info":
 				$info_text = $value['std'];
 				$output .= '<div class="of-info">'.$info_text.'</div>';
 			break;   
 
-			////////////////////////////////////////
-			
+
+			// Heading
 			case 'heading':
 				if($counter >= 2){
 				   $output .= '</div>'."\n";
@@ -2044,40 +2045,9 @@ class Options_Machine {
 				$output .= '<div class="group" id="'. $jquery_click_hook  .'"><h2>'.$value['name'].'</h2>'."\n";
 			break;
 			
-			////////////////////////////////////////
-			
+
+			// Slider
 			case 'slider':
-				/* 
-				$_id = strip_tags( strtolower($value['id']) );
-				$int = '';
-				$int = optionsframework_mlu_get_silentpost( $_id );
-				
-				$output .= '<div class="slider">';
-				$output .= '<ul id="'.$value['id'].'" rel="'.$int.'">';
-				if( isset($of_sequoia[$value['id']]) ) :
-					
-					$slides = $of_sequoia[$value['id']];
-					$count = count($slides);
-					
-					if (isset($count) && $count < 2) {
-						$oldorder = 1;
-						$order = 1;
-						$output .= Options_Machine::optionsframework_slider_function($value['id'],$value['std'],$oldorder,$order,$int);
-					} else {
-						$i = 0;
-						foreach ($slides as $slide) {
-							$oldorder = $slide['order'];
-							$i++;
-							$order = $i;
-							$output .= Options_Machine::optionsframework_slider_function($value['id'],$value['std'],$oldorder,$order,$int);
-						}
-					}
-					
-				endif; // isset
-				$output .= '</ul>';
-				
-				$output .= '<a href="#" class="button slide_add_button">Add New Slide</a></div>';
-				 */
 				
 				$output .= '<div class="slider"><ul id="'.$value['id'].'">';
 				$slides = $of_sequoia[$value['id']];
@@ -2100,41 +2070,8 @@ class Options_Machine {
 		
 			break;
 			
-			
-			
 			////////////////////////////////////////
-			
 			case 'icons':
-				/* 
-				$_id = strip_tags( strtolower($value['id']) );
-				$int = '';
-				$int = optionsframework_mlu_get_silentpost( $_id );
-				
-				$output .= '<div class="slider">';
-				$output .= '<ul id="'.$value['id'].'" rel="'.$int.'">';
-				if( isset($of_sequoia[$value['id']]) ) :
-					
-					$icons = $of_sequoia[$value['id']];
-					$count = count($icons);
-					
-					if (isset($count) && $count < 2) {
-						$oldorder = 1;
-						$order = 1;
-						$output .= Options_Machine::optionsframework_icons_function($value['id'],$value['std'],$oldorder,$order,$int);
-					} else {
-						$i = 0;
-						foreach ($icons as $icon) {
-							$oldorder = $icon['order'];
-							$i++;
-							$order = $i;
-							$output .= Options_Machine::optionsframework_icons_function($value['id'],$value['std'],$oldorder,$order,$int);
-						}
-					}
-					
-				endif; // isset
-				$output .= '</ul>';			
-				$output .= '<a href="#" class="button icon_add_button">Add New Item</a></div>';
-				 */
 				
 				$output .= '<div class="slider"><ul id="'.$value['id'].'">';
 				$icons = $of_sequoia[$value['id']];
@@ -2153,26 +2090,7 @@ class Options_Machine {
 					}
 				}			
 				$output .= '</ul>';
-				$output .= '<a href="#" class="button icon_add_button">Add New Item</a></div>';
-				
-				
-				
-				
-				
-				
-				if ( !wp_script_is( 'select2', 'enqueued' )) {
-				
-					function enqueue_select2_th_options () {
-				
-						wp_register_script( 'select2', get_template_directory_uri() . '/js/select2/select2.min.js');
-						wp_enqueue_script( 'select2' );
-						
-						wp_register_style( 'select2-css',get_template_directory_uri() . '/js/select2/select2.css','', '', 'all' );
-						wp_enqueue_style( 'select2-css' );
-					}
-					
-					add_action( 'admin_enqueue_scripts', 'enqueue_select2_th_options' );
-				}
+				$output .= '<a href="#" class="button icon_add_button">Add New Icon</a></div>';
 				
 			break;
 			////////////////////////////////////////
@@ -2203,9 +2121,7 @@ class Options_Machine {
 								
 								
 								$output .= '<li id="'.$key.'" class="sortee" style="width:'.$string_to_array[1].'%">';
-								
-		//$output .= '<input class="position" type="hidden" name="'.$value['id'].'['.$group.']['.$key.']" value="'.$list[0].$list[1].'" id="'.$list[0].'">';
-		
+										
 								$output .= '<input class="position" type="hidden" name="'.$value['id'].'['.$group.']['.$key.']" value="'. $array_to_string . '" id="'.$string_to_array[0].'">';
 								
 
@@ -2255,20 +2171,7 @@ class Options_Machine {
 
 				$background = $of_sequoia[$value['id']];
 
-				/******************** BACKGROUND COLOR	**********************	
-				$output .= '<div id="' . esc_attr( $value['id'] ) . '_color_picker" class="colorSelector"><div style="' . esc_attr( 'background-color:' . $background['color'] ) . '"></div></div>';
-				$output .= '<input class="of-color of-background of-background-color" name="' . esc_attr( '[' . $value['id'] . '][color]' ) . '" id="' . esc_attr( $value['id'] . '_color' ) . '" type="text" value="' . esc_attr( $background['color'] ) . '" />';
-				*/
-				/******************** BACKGROUND IMAGE ********************** 
-				if (!isset($background['image'])) {
-					$background['image'] = '';
-				}
 
-				$output .= Options_Machine::optionsframework_uploader_function( $value['id'], $background['image'], null, '',0,'image');
-				$class = 'of-background-properties';
-				if ( '' == $background['image'] ) {
-					$class .= ' hide';
-				}*/
 				$output .= '<div class="' . esc_attr( $class ) . '"></div>';
 
 				/******************** BACKGROUND Repeat***********************/
@@ -2442,7 +2345,7 @@ class Options_Machine {
 				$output .= '<input type="checkbox" id="'.$value['id'].'" class="'.$fold.'checkbox of-input main_checkbox" name="'.$value['id'].'"  value="1" '. checked($of_sequoia[$value['id']], 1, false) .' />';
 
 				$output .= '</p>';
-			  
+
 			break;
 			
 			} 
@@ -2476,7 +2379,9 @@ class Options_Machine {
 		
 		}
 		$output .= '</div>';
-		return array($output,$menu,$defaults);	
+
+		return array( $output, $menu, $defaults );
+
 	}
 
 
@@ -2528,16 +2433,16 @@ class Options_Machine {
 	/*-----------------------------------------------------------------------------------*/
 	public static function optionsframework_media_uploader_function($id,$std,$mod){
 
-	    $of_sequoia = get_option(OPTIONS);
+		$of_sequoia = get_option(OPTIONS);
 		
 		$uploader = '';
-	    $upload = $of_sequoia[$id];
+		$upload = $of_sequoia[$id];
 		$hide = '';
 		
 		if ($mod == "min") {$hide ='hide';}
 		
-	    if ( $upload != "") { $val = $upload; } else {$val = $std;}
-	    
+		if ( $upload != "") { $val = $upload; } else {$val = $std;}
+		
 		$uploader .= '<input class="'.$hide.' upload of-input" name="'. $id .'" id="'. $id .'_upload" value="'. $val .'" />';	
 		
 		//Upload controls DIV
@@ -2559,9 +2464,9 @@ class Options_Machine {
 		//Preview
 		$uploader .= '<div class="screenshot">';
 		if(!empty($upload)){	
-	    	$uploader .= '<a class="of-uploaded-image" href="'. $upload . '">';
-	    	$uploader .= '<img class="of-option-image" id="image_'.$id.'" src="'.$upload.'" alt="" />';
-	    	$uploader .= '</a>';			
+			$uploader .= '<a class="of-uploaded-image" href="'. $upload . '">';
+			$uploader .= '<img class="of-option-image" id="image_'.$id.'" src="'.$upload.'" alt="" />';
+			$uploader .= '</a>';			
 			}
 		$uploader .= '</div>';
 		$uploader .= '<div class="clear"></div>' . "\n"; 
@@ -2581,9 +2486,9 @@ class Options_Machine {
 		
 		$slider = '';
 		$slide = array();
-	    $slide = $of_sequoia[$id];
+		$slide = $of_sequoia[$id];
 		
-	    if (isset($slide[$oldorder])) { $val = $slide[$oldorder]; } else {$val = $std;}
+		if (isset($slide[$oldorder])) { $val = $slide[$oldorder]; } else {$val = $std;}
 		
 		//initialize all vars
 		$slidevars = array('title','url','link','description');
@@ -2621,9 +2526,9 @@ class Options_Machine {
 		$slider .= '<div class="screenshot">';
 		if(!empty($val['url'])){
 			
-	    	$slider .= '<a class="of-uploaded-image" href="'. $val['url'] . '">';
-	    	$slider .= '<img class="of-option-image" id="image_'.$id.'_'.$order .'" src="'.$val['url'].'" alt="" />';
-	    	$slider .= '</a>';
+			$slider .= '<a class="of-uploaded-image" href="'. $val['url'] . '">';
+			$slider .= '<img class="of-option-image" id="image_'.$id.'_'.$order .'" src="'.$val['url'].'" alt="" />';
+			$slider .= '</a>';
 			
 			}
 		$slider .= '</div>';	
@@ -2634,7 +2539,7 @@ class Options_Machine {
 		$slider .= '<textarea class="slide of-input" name="'. $id .'['.$order.'][description]" id="'. $id .'_'.$order .'_slide_description" cols="8" rows="8">'.stripslashes($val['description']).'</textarea>';
 	
 		$slider .= '<a class="slide_delete_button" href="#">Delete</a>';
-	    $slider .= '<div class="clear"></div>' . "\n";
+		$slider .= '<div class="clear"></div>' . "\n";
 	
 		$slider .= '</div>';
 		$slider .= '</li>';
@@ -2704,7 +2609,7 @@ class Options_Machine {
 			}
 
 		$icons_holder .= '</select><br>';
-		$icons_holder .= '<script>';
+	/* 	$icons_holder .= '<script>';
 		
 		$icons_holder .= 'jQuery(document).ready(function() { ';
 		
@@ -2721,7 +2626,7 @@ class Options_Machine {
 		$icons_holder .= '			escapeMarkup: function(m) { return m; }';
 		$icons_holder .= '		}); ';
 		$icons_holder .= '});';
-		$icons_holder .= '</script>';
+		$icons_holder .= '</script>'; */
 		// end SELECT
 		
 		
@@ -2736,6 +2641,7 @@ class Options_Machine {
 		$icons_holder .= '</li>';
 
 	return $icons_holder;
+
 	}
 	
 	

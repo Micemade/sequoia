@@ -38,6 +38,7 @@ gulp.task('eol', function () {
     .pipe(dos2unix()) // This defaults to {feedback: false, write: false}
     .pipe(gulp.dest($packTemp))
   });
+  
 // EOL it in place
 gulp.task('eolthis', function () {
     return gulp.src('/**')
@@ -195,12 +196,12 @@ gulp.task('cleansrc', function () {
 gulp.task('pack', function() {
     return runSequence(
         'makepot',
-        'styles',
-        'scripts',
+        //'styles',
+        //'scripts',
         'copy',
-        'eol'//,
-        //'zipit',
-        //'clean-temp'
+        'eol',
+        'zipit',
+        'clean-temp'
     );
 });
 
